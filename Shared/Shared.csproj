@@ -5,24 +5,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Shared\bin\Debug\netstandard2.0\Shared.deps.json" />
-    <None Remove="Shared\bin\Release\netstandard2.0\Shared.deps.json" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Content Include="Shared\bin\Debug\netstandard2.0\Shared.deps.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-    </Content>
-    <Content Include="Shared\bin\Release\netstandard2.0\Shared.deps.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-    </Content>
-  </ItemGroup>
-
-  <ItemGroup>
     <None Include="Shared\Shared.csproj" />
   </ItemGroup>
 
