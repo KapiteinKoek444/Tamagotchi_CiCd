@@ -6734,8 +6734,8 @@
     },
     "Shared/1.0.0": {
       "type": "project",
-      "path": "../../Tamago_ShopApi/Shared/Shared.csproj",
-      "msbuildProject": "../../Tamago_ShopApi/Shared/Shared.csproj"
+      "path": "../Shared/Shared.csproj",
+      "msbuildProject": "../Shared/Shared.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -6771,8 +6771,8 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\Users\\Pouki\\Documents\\#Rep_C#\\S3_Tamagotchi_Project\\Tamago_ShopApi\\Shared\\Shared.csproj": {
-              "projectPath": "C:\\Users\\Pouki\\Documents\\#Rep_C#\\S3_Tamagotchi_Project\\Tamago_ShopApi\\Shared\\Shared.csproj"
+            "C:\\Users\\Pouki\\Documents\\#Rep_C#\\S3_Tamagotchi_Project\\Tamago_WebApi's\\Shared\\Shared.csproj": {
+              "projectPath": "C:\\Users\\Pouki\\Documents\\#Rep_C#\\S3_Tamagotchi_Project\\Tamago_WebApi's\\Shared\\Shared.csproj"
             }
           }
         }

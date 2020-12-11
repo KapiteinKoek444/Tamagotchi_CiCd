@@ -4,14 +4,14 @@
     "C:\\Users\\Pouki\\Documents\\#Rep_C#\\S3_Tamagotchi_Project\\Tamago_WebApi's\\Tamago_Bank\\Tamago_Bank.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Pouki\\Documents\\#Rep_C#\\S3_Tamagotchi_Project\\Tamago_ShopApi\\Shared\\Shared.csproj": {
+    "C:\\Users\\Pouki\\Documents\\#Rep_C#\\S3_Tamagotchi_Project\\Tamago_WebApi's\\Shared\\Shared.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Pouki\\Documents\\#Rep_C#\\S3_Tamagotchi_Project\\Tamago_ShopApi\\Shared\\Shared.csproj",
+        "projectUniqueName": "C:\\Users\\Pouki\\Documents\\#Rep_C#\\S3_Tamagotchi_Project\\Tamago_WebApi's\\Shared\\Shared.csproj",
         "projectName": "Shared",
-        "projectPath": "C:\\Users\\Pouki\\Documents\\#Rep_C#\\S3_Tamagotchi_Project\\Tamago_ShopApi\\Shared\\Shared.csproj",
+        "projectPath": "C:\\Users\\Pouki\\Documents\\#Rep_C#\\S3_Tamagotchi_Project\\Tamago_WebApi's\\Shared\\Shared.csproj",
         "packagesPath": "C:\\Users\\Pouki\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Pouki\\Documents\\#Rep_C#\\S3_Tamagotchi_Project\\Tamago_ShopApi\\Shared\\obj\\",
+        "outputPath": "C:\\Users\\Pouki\\Documents\\#Rep_C#\\S3_Tamagotchi_Project\\Tamago_WebApi's\\Shared\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Pouki\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -109,8 +109,8 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Users\\Pouki\\Documents\\#Rep_C#\\S3_Tamagotchi_Project\\Tamago_ShopApi\\Shared\\Shared.csproj": {
-                "projectPath": "C:\\Users\\Pouki\\Documents\\#Rep_C#\\S3_Tamagotchi_Project\\Tamago_ShopApi\\Shared\\Shared.csproj"
+              "C:\\Users\\Pouki\\Documents\\#Rep_C#\\S3_Tamagotchi_Project\\Tamago_WebApi's\\Shared\\Shared.csproj": {
+                "projectPath": "C:\\Users\\Pouki\\Documents\\#Rep_C#\\S3_Tamagotchi_Project\\Tamago_WebApi's\\Shared\\Shared.csproj"
               }
             }
           }
