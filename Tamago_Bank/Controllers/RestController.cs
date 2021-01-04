@@ -1,11 +1,10 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using MongoDB.Driver;
+using Shared.Shared.ApiModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
-using Tamago_Bank.Models;
 
 namespace Tamago_Bank.Controllers
 {
@@ -13,41 +12,41 @@ namespace Tamago_Bank.Controllers
 	[Route("rest")]
 	public class RestController : Controller
 	{
-		private IMongoCollection<WalletDTO> _walletCollection;
+		private IMongoCollection<WalletModel> _walletCollection;
 
 		public RestController(IMongoClient client)
 		{
 			var database = client.GetDatabase("Bank_Database");
-			_walletCollection = database.GetCollection<WalletDTO>("CWallet");
+			_walletCollection = database.GetCollection<WalletModel>("CWallet");
 		}
 
 		[HttpGet]
-		public IEnumerable<WalletDTO> Get()
+		public IEnumerable<WalletModel> Get()
 		{
-			var data = _walletCollection.Find(Builders<WalletDTO>.Filter.Empty).ToList();
+			var data = _walletCollection.Find(Builders<WalletModel>.Filter.Empty).ToList();
 			return data;
 		}
 
 		[HttpGet("{id}")]
-		public WalletDTO Get([FromRoute] Guid id)
+		public WalletModel Get([FromRoute] Guid id)
 		{
-			var filter = Builders<WalletDTO>.Filter.Eq("userId", id);
-			var data = _walletCollection.Find(filter).First();
+			var filter = Builders<WalletModel>.Filter.Eq("userId", id);
+			var data = _walletCollection.Find(filter).FirstOrDefault();
 			return data;
 		}
 
 		[HttpDelete("{id}")]
 		[Route("remove/{id}")]
-		public WalletDTO Remove([FromRoute] Guid id)
+		public WalletModel Remove([FromRoute] Guid id)
 		{
-			var filter = Builders<WalletDTO>.Filter.Eq("userId", id);
+			var filter = Builders<WalletModel>.Filter.Eq("userId", id);
 			var data = _walletCollection.FindOneAndDelete(filter);
 			return data;
 		}
 
 		[HttpPost]
 		[Route("post")]
-		public IActionResult Post([FromBody] WalletDTO wallet)
+		public IActionResult Post([FromBody] WalletModel wallet)
 		{
 			_walletCollection.InsertOne(wallet);
 			return StatusCode(StatusCodes.Status201Created, wallet);
@@ -55,14 +54,14 @@ namespace Tamago_Bank.Controllers
 
 		[HttpPost("{id}")]
 		[Route("new/{id}")]
-		public IActionResult Post([FromRoute] Guid id)
+		public WalletModel Post([FromRoute] Guid id)
 		{
-			WalletDTO wallet = new WalletDTO();
+			WalletModel wallet = new WalletModel();
 			wallet.id = Guid.NewGuid();
 			wallet.balance = 1000;
 			wallet.userId = id;
 			_walletCollection.InsertOne(wallet);
-			return StatusCode(StatusCodes.Status201Created, wallet);
+			return wallet;
 		}
 	}
 }

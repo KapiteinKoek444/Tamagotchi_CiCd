@@ -3,11 +3,11 @@ using Microsoft.AspNetCore.Mvc;
 using MongoDB.Driver;
 using Shared.Extensions.ActiveMQ;
 using Shared.Shared.ActiveMQ_Models;
+using Shared.Shared.ApiModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Tamago_Shop.Models;
 
 namespace Tamago_Shop.Controllers
 {
@@ -15,7 +15,7 @@ namespace Tamago_Shop.Controllers
 	[Route("active")]
 	public class ActiveMQController : Controller
 	{
-		private IMongoCollection<FoodDTO> _foodCollection;
+		private IMongoCollection<FoodModel> _foodCollection;
 		private readonly IActiveMqLog _activeMQLogBank;
 		private readonly IActiveMqLog _activeMQLogInv;
 		private readonly IActiveMqLog _activeMQLogInvItems;
@@ -24,7 +24,7 @@ namespace Tamago_Shop.Controllers
 		public ActiveMQController(IMongoClient client, IActiveMqLog activeMQLog)
 		{
 			var database = client.GetDatabase("Shop_Database");
-			_foodCollection = database.GetCollection<FoodDTO>("CFood");
+			_foodCollection = database.GetCollection<FoodModel>("CFood");
 
 			//ActivemqLogs
 			_activeMQLogBank = activeMQLog;
@@ -54,7 +54,7 @@ namespace Tamago_Shop.Controllers
 		[Route("buyfood")]
 		public async Task<string> BuyFood([FromBody] BuyItemModel model)
 		{
-			var filter = Builders<FoodDTO>.Filter.Eq("id", model.itemId);
+			var filter = Builders<FoodModel>.Filter.Eq("id", model.itemId);
 			var data = _foodCollection.Find(filter).First();
 
 			//send the request
@@ -63,7 +63,7 @@ namespace Tamago_Shop.Controllers
 			return r;
 		}
 
-		public async Task<string> AddFoodToInventory(FoodDTO food, Guid userId)
+		public async Task<string> AddFoodToInventory(FoodModel food, Guid userId)
 		{
 			ItemModel model = new ItemModel();
 			model.itemId = food.id;
@@ -119,7 +119,7 @@ namespace Tamago_Shop.Controllers
 
 			foreach(var i in model.Items)
 			{
-				var filter = Builders<FoodDTO>.Filter.Eq("id", i);
+				var filter = Builders<FoodModel>.Filter.Eq("id", i);
 				var data = _foodCollection.Find(filter).First();
 				FoodModel m = new FoodModel();
 

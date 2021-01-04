@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "bSDx3gTsHn1SYZlyK7CHlQjrBlCMLu0xL7LeNS9Xc5jJownOl39aAm4bW6/bWyoBg17jHidz6KAcJE2ZZexRMw==",
+  "dgSpecHash": "8eJy0HlT8uQfrgjGzI1XoARgVKsOpw5hYc7LE48bXbUQz4nPyuk9of/SIGTu2S5DkKaifwY0abNv/gqjDWPAVA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Pouki\\Documents\\#Rep_C#\\S3_Tamagotchi_Project\\Tamago_WebApi's\\Tamago_Shop\\Tamago_Shop.csproj",
+  "projectFilePath": "C:\\Users\\Pouki\\Documents\\#Rep_C\\#Fontys_S3\\S3_Tamago_WebApi's\\Tamago_Shop\\Tamago_Shop.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Pouki\\.nuget\\packages\\apache.nms\\1.7.1\\apache.nms.1.7.1.nupkg.sha512",
     "C:\\Users\\Pouki\\.nuget\\packages\\apache.nms.activemq\\1.7.2\\apache.nms.activemq.1.7.2.nupkg.sha512",

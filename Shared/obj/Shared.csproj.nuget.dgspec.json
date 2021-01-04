@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Pouki\\Documents\\#Rep_C#\\S3_Tamagotchi_Project\\Tamago_WebApi's\\Shared\\Shared.csproj": {}
+    "C:\\Users\\Pouki\\Documents\\#Rep_C\\#Fontys_S3\\S3_Tamago_WebApi's\\Shared\\Shared.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Pouki\\Documents\\#Rep_C#\\S3_Tamagotchi_Project\\Tamago_WebApi's\\Shared\\Shared.csproj": {
+    "C:\\Users\\Pouki\\Documents\\#Rep_C\\#Fontys_S3\\S3_Tamago_WebApi's\\Shared\\Shared.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Pouki\\Documents\\#Rep_C#\\S3_Tamagotchi_Project\\Tamago_WebApi's\\Shared\\Shared.csproj",
+        "projectUniqueName": "C:\\Users\\Pouki\\Documents\\#Rep_C\\#Fontys_S3\\S3_Tamago_WebApi's\\Shared\\Shared.csproj",
         "projectName": "Shared",
-        "projectPath": "C:\\Users\\Pouki\\Documents\\#Rep_C#\\S3_Tamagotchi_Project\\Tamago_WebApi's\\Shared\\Shared.csproj",
+        "projectPath": "C:\\Users\\Pouki\\Documents\\#Rep_C\\#Fontys_S3\\S3_Tamago_WebApi's\\Shared\\Shared.csproj",
         "packagesPath": "C:\\Users\\Pouki\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Pouki\\Documents\\#Rep_C#\\S3_Tamagotchi_Project\\Tamago_WebApi's\\Shared\\obj\\",
+        "outputPath": "C:\\Users\\Pouki\\Documents\\#Rep_C\\#Fontys_S3\\S3_Tamago_WebApi's\\Shared\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Pouki\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -59,6 +59,10 @@
             "Microsoft.Extensions.DependencyInjection.Abstractions": {
               "target": "Package",
               "version": "[5.0.0, )"
+            },
+            "MongoDB.Bson": {
+              "target": "Package",
+              "version": "[2.11.5, )"
             },
             "NETStandard.Library": {
               "suppressParent": "All",
