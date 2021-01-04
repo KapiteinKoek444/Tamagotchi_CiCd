@@ -10,7 +10,8 @@ export class SignalRService {
   public data: AnimalModel;
 
   private hubconnection: signalR.HubConnection;
-  private url = "https://tamagotchigateway.azurewebsites.net/api/socket/AnimalValues";
+  //private url = "https://tamagotchigateway.azurewebsites.net/api/socket/AnimalValues";
+  private url = "https://localhost:5021/api/socket/AnimalValues";
 
   constructor() { }
 

@@ -61,7 +61,8 @@ export class ApiServiceAnimal {
   }
 
   public ConnectAnimal(userId: String){
-    var result = this.http.get('https://tamagotchigateway.azurewebsites.net/api/animal/ConnectAnimal/' + userId, httpOptions);
+    //var result = this.http.get('https://tamagotchigateway.azurewebsites.net/api/animal/ConnectAnimal/' + userId, httpOptions);
+    var result = this.http.get('https://localhost:5021/api/animal/ConnectAnimal/' + userId, httpOptions);
     console.log(result);
     return result;
   }
