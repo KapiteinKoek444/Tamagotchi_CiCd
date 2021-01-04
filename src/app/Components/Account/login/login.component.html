@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+
+<h1 class="title">Log in</h1>
+
+<div class="input-table">
+  <p class="input-title">Username:</p>
+  <input #textboxEmail class="input-box" id="emailField" type="text" ngModel="" required>
+  <p class="input-title">Password:</p>
+  <input #textboxPassword class="input-box" id="passwordField" type="password" ngModel="" required>
+  <br><br>
+  <button class="submit" id="loginButton"(click)="Login(textboxEmail.value, textboxPassword.value)">Login</button>
+  <br>
+  <p class="subtitle">no account? </p><a class="sublink" routerLink="/register" id="registerButton">register Here!</a>
+</div>
+
