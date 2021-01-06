@@ -1,9 +1,9 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using MongoDB.Driver;
 using Shared.Shared.ApiModels;
+using Shop_Test.Factory;
 using System.Collections.Generic;
 using Tamago_Shop.Controllers;
-using Testing_Shared.Factory;
 
 namespace Shop_Test
 {

@@ -15,7 +15,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Shared\Shared.csproj" />
-    <ProjectReference Include="..\Shared_Test\Shared_Test.csproj" />
     <ProjectReference Include="..\Tamago_Inventory\Tamago_Inventory.csproj" />
   </ItemGroup>
 

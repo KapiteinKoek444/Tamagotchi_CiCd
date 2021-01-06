@@ -12,7 +12,6 @@
           "MSTest.TestFramework": "2.1.1",
           "Microsoft.NET.Test.Sdk": "16.7.1",
           "Shared": "1.0.0",
-          "Shared_Test": "1.0.0",
           "Tamago_Inventory": "1.0.0",
           "coverlet.collector": "1.3.0"
         },
@@ -1488,14 +1487,6 @@
           "Shared.dll": {}
         }
       },
-      "Shared_Test/1.0.0": {
-        "dependencies": {
-          "Shared": "1.0.0"
-        },
-        "runtime": {
-          "Shared_Test.dll": {}
-        }
-      },
       "Tamago_Inventory/1.0.0": {
         "dependencies": {
           "MongoDB.Driver": "2.11.5",
@@ -2585,11 +2576,6 @@
       "hashPath": "system.xml.xdocument.4.3.0.nupkg.sha512"
     },
     "Shared/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "Shared_Test/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

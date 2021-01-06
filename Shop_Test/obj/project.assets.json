@@ -2514,19 +2514,6 @@
         "frameworkReferences": [
           "Microsoft.AspNetCore.App"
         ]
-      },
-      "Testing_Shared/1.0.0": {
-        "type": "project",
-        "framework": ".NETStandard,Version=v2.0",
-        "dependencies": {
-          "Shared": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/Testing_Shared.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Testing_Shared.dll": {}
-        }
       }
     }
   },
@@ -7688,11 +7675,6 @@
       "type": "project",
       "path": "../Tamago_Shop/Tamago_Shop.csproj",
       "msbuildProject": "../Tamago_Shop/Tamago_Shop.csproj"
-    },
-    "Testing_Shared/1.0.0": {
-      "type": "project",
-      "path": "../Testing_Shared/Testing_Shared.csproj",
-      "msbuildProject": "../Testing_Shared/Testing_Shared.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -7702,7 +7684,6 @@
       "Microsoft.NET.Test.Sdk >= 16.7.1",
       "Shared >= 1.0.0",
       "Tamago_Shop >= 1.0.0",
-      "Testing_Shared >= 1.0.0",
       "coverlet.collector >= 1.3.0"
     ]
   },
@@ -7738,9 +7719,6 @@
             },
             "C:\\Users\\Pouki\\Documents\\#Rep_C\\#Fontys_S3\\S3_Tamago_WebApi's\\Tamago_Shop\\Tamago_Shop.csproj": {
               "projectPath": "C:\\Users\\Pouki\\Documents\\#Rep_C\\#Fontys_S3\\S3_Tamago_WebApi's\\Tamago_Shop\\Tamago_Shop.csproj"
-            },
-            "C:\\Users\\Pouki\\Documents\\#Rep_C\\#Fontys_S3\\S3_Tamago_WebApi's\\Testing_Shared\\Testing_Shared.csproj": {
-              "projectPath": "C:\\Users\\Pouki\\Documents\\#Rep_C\\#Fontys_S3\\S3_Tamago_WebApi's\\Testing_Shared\\Testing_Shared.csproj"
             }
           }
         }

@@ -1,10 +1,10 @@
+using Inventory_Test.Factory;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using MongoDB.Driver;
 using Shared.Shared.ApiModels;
 using System;
 using System.Collections.Generic;
 using Tamago_Inventory.Controllers;
-using Testing_Shared.Factory;
 
 namespace Inventory_Test
 {
