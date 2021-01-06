@@ -149,6 +149,10 @@
               "target": "Package",
               "version": "[2.11.5, )"
             },
+            "MongoDB.Driver": {
+              "target": "Package",
+              "version": "[2.11.5, )"
+            },
             "NETStandard.Library": {
               "suppressParent": "All",
               "target": "Package",
