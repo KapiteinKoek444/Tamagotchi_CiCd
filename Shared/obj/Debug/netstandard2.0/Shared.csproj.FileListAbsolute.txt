@@ -12,3 +12,6 @@ C:\Users\Pouki\Documents\#Rep_C\#Fontys_S3\S3_Tamago_WebApi's\Shared\obj\Debug\n
 C:\Users\Pouki\Documents\#Rep_C\#Fontys_S3\S3_Tamago_WebApi's\Shared\bin\Debug\netstandard2.0\Shared.deps.json
 C:\Users\Pouki\Documents\#Rep_C\#Fontys_S3\S3_Tamago_WebApi's\Shared\bin\Debug\netstandard2.0\Shared.dll
 C:\Users\Pouki\Documents\#Rep_C\#Fontys_S3\S3_Tamago_WebApi's\Shared\bin\Debug\netstandard2.0\Shared.pdb
+C:\Users\Pouki\Documents\#Rep_C\#Fontys_S3\S3_Tamago_WebApi's\Shared\bin\Debug\netstandard2.0\snappy32.dll
+C:\Users\Pouki\Documents\#Rep_C\#Fontys_S3\S3_Tamago_WebApi's\Shared\bin\Debug\netstandard2.0\snappy64.dll
+C:\Users\Pouki\Documents\#Rep_C\#Fontys_S3\S3_Tamago_WebApi's\Shared\bin\Debug\netstandard2.0\libzstd.dll

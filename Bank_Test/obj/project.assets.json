@@ -2,25 +2,26 @@
   "version": 3,
   "targets": {
     ".NETCoreApp,Version=v3.1": {
-      "Apache.NMS/1.7.1": {
+      "Apache.NMS/1.8.0": {
         "type": "package",
         "compile": {
-          "lib/net40/Apache.NMS.dll": {}
+          "lib/netstandard2.0/Apache.NMS.dll": {}
         },
         "runtime": {
-          "lib/net40/Apache.NMS.dll": {}
+          "lib/netstandard2.0/Apache.NMS.dll": {}
         }
       },
-      "Apache.NMS.ActiveMQ/1.7.2": {
+      "Apache.NMS.ActiveMQ/1.8.0": {
         "type": "package",
         "dependencies": {
-          "Apache.NMS": "1.7.1"
+          "Apache.NMS": "1.8.0",
+          "System.Runtime": "4.3.1"
         },
         "compile": {
-          "lib/net40/Apache.NMS.ActiveMQ.dll": {}
+          "lib/netstandard2.0/Apache.NMS.ActiveMQ.dll": {}
         },
         "runtime": {
-          "lib/net40/Apache.NMS.ActiveMQ.dll": {}
+          "lib/netstandard2.0/Apache.NMS.ActiveMQ.dll": {}
         }
       },
       "Consul/1.6.1.1": {
@@ -469,7 +470,7 @@
           "lib/netstandard2.0/Microsoft.AspNetCore.WebUtilities.dll": {}
         }
       },
-      "Microsoft.CodeCoverage/16.7.1": {
+      "Microsoft.CodeCoverage/16.8.3": {
         "type": "package",
         "compile": {
           "lib/netcoreapp1.0/Microsoft.VisualStudio.CodeCoverage.Shim.dll": {}
@@ -794,11 +795,11 @@
           "lib/netstandard2.0/Microsoft.Net.Http.Headers.dll": {}
         }
       },
-      "Microsoft.NET.Test.Sdk/16.7.1": {
+      "Microsoft.NET.Test.Sdk/16.8.3": {
         "type": "package",
         "dependencies": {
-          "Microsoft.CodeCoverage": "16.7.1",
-          "Microsoft.TestPlatform.TestHost": "16.7.1"
+          "Microsoft.CodeCoverage": "16.8.3",
+          "Microsoft.TestPlatform.TestHost": "16.8.3"
         },
         "build": {
           "build/netcoreapp2.1/Microsoft.NET.Test.Sdk.props": {},
@@ -817,7 +818,7 @@
           "lib/netstandard1.0/_._": {}
         }
       },
-      "Microsoft.NETCore.Targets/1.1.0": {
+      "Microsoft.NETCore.Targets/1.1.3": {
         "type": "package",
         "compile": {
           "lib/netstandard1.0/_._": {}
@@ -826,10 +827,12 @@
           "lib/netstandard1.0/_._": {}
         }
       },
-      "Microsoft.TestPlatform.ObjectModel/16.7.1": {
+      "Microsoft.TestPlatform.ObjectModel/16.8.3": {
         "type": "package",
         "dependencies": {
-          "NuGet.Frameworks": "5.0.0"
+          "NuGet.Frameworks": "5.0.0",
+          "System.Reflection.Metadata": "1.6.0",
+          "System.Runtime.InteropServices.RuntimeInformation": "4.0.0"
         },
         "compile": {
           "lib/netstandard2.0/Microsoft.TestPlatform.CoreUtilities.dll": {},
@@ -922,24 +925,30 @@
           }
         }
       },
-      "Microsoft.TestPlatform.TestHost/16.7.1": {
+      "Microsoft.TestPlatform.TestHost/16.8.3": {
         "type": "package",
         "dependencies": {
-          "Microsoft.TestPlatform.ObjectModel": "16.7.1",
+          "Microsoft.TestPlatform.ObjectModel": "16.8.3",
           "Newtonsoft.Json": "9.0.1"
         },
         "compile": {
           "lib/netcoreapp2.1/Microsoft.TestPlatform.CommunicationUtilities.dll": {},
+          "lib/netcoreapp2.1/Microsoft.TestPlatform.CoreUtilities.dll": {},
           "lib/netcoreapp2.1/Microsoft.TestPlatform.CrossPlatEngine.dll": {},
+          "lib/netcoreapp2.1/Microsoft.TestPlatform.PlatformAbstractions.dll": {},
           "lib/netcoreapp2.1/Microsoft.TestPlatform.Utilities.dll": {},
           "lib/netcoreapp2.1/Microsoft.VisualStudio.TestPlatform.Common.dll": {},
+          "lib/netcoreapp2.1/Microsoft.VisualStudio.TestPlatform.ObjectModel.dll": {},
           "lib/netcoreapp2.1/testhost.dll": {}
         },
         "runtime": {
           "lib/netcoreapp2.1/Microsoft.TestPlatform.CommunicationUtilities.dll": {},
+          "lib/netcoreapp2.1/Microsoft.TestPlatform.CoreUtilities.dll": {},
           "lib/netcoreapp2.1/Microsoft.TestPlatform.CrossPlatEngine.dll": {},
+          "lib/netcoreapp2.1/Microsoft.TestPlatform.PlatformAbstractions.dll": {},
           "lib/netcoreapp2.1/Microsoft.TestPlatform.Utilities.dll": {},
           "lib/netcoreapp2.1/Microsoft.VisualStudio.TestPlatform.Common.dll": {},
+          "lib/netcoreapp2.1/Microsoft.VisualStudio.TestPlatform.ObjectModel.dll": {},
           "lib/netcoreapp2.1/testhost.dll": {}
         },
         "resource": {
@@ -1154,7 +1163,10 @@
           "build/_._": {}
         }
       },
-      "MSTest.TestAdapter/2.1.1": {
+      "MSBuild.SonarQube.Runner.Tool/4.8.0": {
+        "type": "package"
+      },
+      "MSTest.TestAdapter/2.1.2": {
         "type": "package",
         "dependencies": {
           "NETStandard.Library": "1.6.1",
@@ -1164,7 +1176,7 @@
           "build/netcoreapp1.0/MSTest.TestAdapter.props": {}
         }
       },
-      "MSTest.TestFramework/2.1.1": {
+      "MSTest.TestFramework/2.1.2": {
         "type": "package",
         "compile": {
           "lib/netstandard1.0/Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll": {},
@@ -2000,11 +2012,11 @@
           "ref/netstandard1.0/System.Resources.ResourceManager.dll": {}
         }
       },
-      "System.Runtime/4.3.0": {
+      "System.Runtime/4.3.1": {
         "type": "package",
         "dependencies": {
-          "Microsoft.NETCore.Platforms": "1.1.0",
-          "Microsoft.NETCore.Targets": "1.1.0"
+          "Microsoft.NETCore.Platforms": "1.1.1",
+          "Microsoft.NETCore.Targets": "1.1.3"
         },
         "compile": {
           "ref/netstandard1.5/System.Runtime.dll": {}
@@ -2483,13 +2495,14 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
-          "Apache.NMS.ActiveMQ": "1.7.2",
+          "Apache.NMS.ActiveMQ": "1.8.0",
           "Consul": "1.6.1.1",
           "Json.Net": "1.0.23",
           "Microsoft.AspNetCore": "2.2.0",
           "Microsoft.Extensions.DependencyInjection.Abstractions": "5.0.0",
           "MongoDB.Bson": "2.11.5",
           "MongoDB.Driver": "2.11.5",
+          "MongoDB.Driver.Core": "2.11.5",
           "Newtonsoft.Json": "12.0.3"
         },
         "compile": {
@@ -2503,9 +2516,9 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
         "dependencies": {
-          "MSTest.TestAdapter": "2.1.1",
-          "MSTest.TestFramework": "2.1.1",
-          "Microsoft.NET.Test.Sdk": "16.7.1",
+          "MSTest.TestAdapter": "2.1.2",
+          "MSTest.TestFramework": "2.1.2",
+          "Microsoft.NET.Test.Sdk": "16.8.3",
           "Shared": "1.0.0",
           "Tamago_Shop": "1.0.0",
           "coverlet.collector": "1.3.0"
@@ -2524,6 +2537,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
         "dependencies": {
+          "MSBuild.SonarQube.Runner.Tool": "4.8.0",
           "MongoDB.Driver": "2.11.5",
           "Shared": "1.0.0"
         },
@@ -2541,6 +2555,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
         "dependencies": {
+          "MSBuild.SonarQube.Runner.Tool": "4.8.0",
           "MongoDB.Driver": "2.11.5",
           "Shared": "1.0.0"
         },
@@ -2557,51 +2572,35 @@
     }
   },
   "libraries": {
-    "Apache.NMS/1.7.1": {
-      "sha512": "sQA+1dl1hBB0AkhBys7oJ6y9lBJnjH5xVc2aQ5bbEv/pbyMhlN8Yuo/NceYVGNdSK89ANp9XyQsaVUI975QLjg==",
+    "Apache.NMS/1.8.0": {
+      "sha512": "kN2PzpT4YLseq0SRPfI0BKZ17PlkVwBUyug1KtauoVHe4QALSIlUCW8rkB/1kPpDCjvRF093FEEVGmMUhPhSew==",
       "type": "package",
-      "path": "apache.nms/1.7.1",
+      "path": "apache.nms/1.8.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "LICENSE.txt",
         "NOTICE.txt",
-        "apache.nms.1.7.1.nupkg.sha512",
+        "apache.nms.1.8.0.nupkg.sha512",
         "apache.nms.nuspec",
-        "lib/net20-cf/Apache.NMS.dll",
-        "lib/net20-cf/Apache.NMS.pdb",
-        "lib/net20-cf/Apache.NMS.xml",
-        "lib/net20/Apache.NMS.dll",
-        "lib/net20/Apache.NMS.pdb",
-        "lib/net20/Apache.NMS.xml",
         "lib/net35/Apache.NMS.dll",
-        "lib/net35/Apache.NMS.pdb",
-        "lib/net35/Apache.NMS.xml",
         "lib/net40/Apache.NMS.dll",
-        "lib/net40/Apache.NMS.pdb",
-        "lib/net40/Apache.NMS.xml"
+        "lib/netstandard2.0/Apache.NMS.dll"
       ]
     },
-    "Apache.NMS.ActiveMQ/1.7.2": {
-      "sha512": "byKSg5/G7JGoDzSGGw4KK43/hpOGrXCtjZyjBcEjTF6ZscnrUiy8r20nyv85P55+nNmfa8q+tSF0GURd1GxYag==",
+    "Apache.NMS.ActiveMQ/1.8.0": {
+      "sha512": "YK8PGOjLWtQfT1I26so7Vg7+epDN3bTLDUti6P8sVZJ32SipG4ZZMFe8YpQck86WMQB3nL8avJzCovXW4+KzYA==",
       "type": "package",
-      "path": "apache.nms.activemq/1.7.2",
+      "path": "apache.nms.activemq/1.8.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "LICENSE.txt",
         "NOTICE.txt",
-        "apache.nms.activemq.1.7.2.nupkg.sha512",
+        "apache.nms.activemq.1.8.0.nupkg.sha512",
         "apache.nms.activemq.nuspec",
-        "lib/net20/Apache.NMS.ActiveMQ.dll",
-        "lib/net20/Apache.NMS.ActiveMQ.pdb",
-        "lib/net20/Apache.NMS.ActiveMQ.xml",
-        "lib/net35/Apache.NMS.ActiveMQ.dll",
-        "lib/net35/Apache.NMS.ActiveMQ.pdb",
-        "lib/net35/Apache.NMS.ActiveMQ.xml",
         "lib/net40/Apache.NMS.ActiveMQ.dll",
-        "lib/net40/Apache.NMS.ActiveMQ.pdb",
-        "lib/net40/Apache.NMS.ActiveMQ.xml"
+        "lib/netstandard2.0/Apache.NMS.ActiveMQ.dll"
       ]
     },
     "Consul/1.6.1.1": {
@@ -3020,10 +3019,10 @@
         "microsoft.aspnetcore.webutilities.nuspec"
       ]
     },
-    "Microsoft.CodeCoverage/16.7.1": {
-      "sha512": "PhSppbk+kvAyD9yGJIcBRJ/XYwY+21YK88l22PGTtixaxNdjnx1idVKh88LCGwKaTL8HhlnQ41VmBiBdZJzIQw==",
+    "Microsoft.CodeCoverage/16.8.3": {
+      "sha512": "pFZAEvmIEkEIKl6WD1wCZ2qkc3f6PLdc2kAjCsUJfaMxVtgq3qxcQd4eZq+ZMt9eSX12VfxtFav2vPy1yiu8bw==",
       "type": "package",
-      "path": "microsoft.codecoverage/16.7.1",
+      "path": "microsoft.codecoverage/16.8.3",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -3052,7 +3051,7 @@
         "build/netstandard1.0/zh-Hant/Microsoft.VisualStudio.TraceDataCollector.resources.dll",
         "lib/net45/Microsoft.VisualStudio.CodeCoverage.Shim.dll",
         "lib/netcoreapp1.0/Microsoft.VisualStudio.CodeCoverage.Shim.dll",
-        "microsoft.codecoverage.16.7.1.nupkg.sha512",
+        "microsoft.codecoverage.16.8.3.nupkg.sha512",
         "microsoft.codecoverage.nuspec"
       ]
     },
@@ -3394,10 +3393,10 @@
         "microsoft.net.http.headers.nuspec"
       ]
     },
-    "Microsoft.NET.Test.Sdk/16.7.1": {
-      "sha512": "7T3XYuLT2CRMZXwlp8p4cEEf6y7VifxTdKwYNzCYp31CN4iyrcDKneIJvNTo0YVnTxJn+CSlGVlUnZHUlAwt9A==",
+    "Microsoft.NET.Test.Sdk/16.8.3": {
+      "sha512": "E2hDEEHIUmDpGm0LIjVenWhXWWd5lWylzuujz0iPwwxPYUA2Ua6jrxfMNdoKombDSk9hpDDA0M3xnFz6TLh/KQ==",
       "type": "package",
-      "path": "microsoft.net.test.sdk/16.7.1",
+      "path": "microsoft.net.test.sdk/16.8.3",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -3410,7 +3409,7 @@
         "build/netcoreapp2.1/Microsoft.NET.Test.Sdk.targets",
         "build/uap10.0/Microsoft.NET.Test.Sdk.props",
         "buildMultiTargeting/Microsoft.NET.Test.Sdk.props",
-        "microsoft.net.test.sdk.16.7.1.nupkg.sha512",
+        "microsoft.net.test.sdk.16.8.3.nupkg.sha512",
         "microsoft.net.test.sdk.nuspec"
       ]
     },
@@ -3431,25 +3430,25 @@
         "version.txt"
       ]
     },
-    "Microsoft.NETCore.Targets/1.1.0": {
-      "sha512": "aOZA3BWfz9RXjpzt0sRJJMjAscAUm3Hoa4UWAfceV9UTYxgwZ1lZt5nO2myFf+/jetYQo4uTP7zS8sJY67BBxg==",
+    "Microsoft.NETCore.Targets/1.1.3": {
+      "sha512": "3Wrmi0kJDzClwAC+iBdUBpEKmEle8FQNsCs77fkiOIw/9oYA07bL1EZNX0kQ2OMN3xpwvl0vAtOCYY3ndDNlhQ==",
       "type": "package",
-      "path": "microsoft.netcore.targets/1.1.0",
+      "path": "microsoft.netcore.targets/1.1.3",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/netstandard1.0/_._",
-        "microsoft.netcore.targets.1.1.0.nupkg.sha512",
+        "microsoft.netcore.targets.1.1.3.nupkg.sha512",
         "microsoft.netcore.targets.nuspec",
         "runtime.json"
       ]
     },
-    "Microsoft.TestPlatform.ObjectModel/16.7.1": {
-      "sha512": "FL+VpAC/nCCzj80MwX6L8gJD06u2m1SKcQQLAymDLFqNtgtI9h3J5n0mVN+s18qcMzybsmO9GK7rMuHYx11KMg==",
+    "Microsoft.TestPlatform.ObjectModel/16.8.3": {
+      "sha512": "dqHiRggyAbkjQO9926SzM11Pn0nKjH1wwM6ee3E9//y1WZsUgTSVCMS14qvlQlk9iUZJyj+iz3/1zplE4Ll+hw==",
       "type": "package",
-      "path": "microsoft.testplatform.objectmodel/16.7.1",
+      "path": "microsoft.testplatform.objectmodel/16.8.3",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -3511,21 +3510,24 @@
         "lib/netstandard2.0/zh-Hans/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll",
         "lib/netstandard2.0/zh-Hant/Microsoft.TestPlatform.CoreUtilities.resources.dll",
         "lib/netstandard2.0/zh-Hant/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll",
-        "microsoft.testplatform.objectmodel.16.7.1.nupkg.sha512",
+        "microsoft.testplatform.objectmodel.16.8.3.nupkg.sha512",
         "microsoft.testplatform.objectmodel.nuspec"
       ]
     },
-    "Microsoft.TestPlatform.TestHost/16.7.1": {
-      "sha512": "mv7MnBDtqwQAjoH+AphE+Tu0dsF6x/c7Zs8umkb2McbvNALJdfBuWJQbiXGWqhNq7k8eMmnkNO6klJz4pkgekw==",
+    "Microsoft.TestPlatform.TestHost/16.8.3": {
+      "sha512": "lF3QPoq7NYs7Xr/j5a44jJvHakRQq5lKyjG9adGNqeN28JmhD2qEogzGOL4GVkofqX1FmmbyUali2jlSVval8A==",
       "type": "package",
-      "path": "microsoft.testplatform.testhost/16.7.1",
+      "path": "microsoft.testplatform.testhost/16.8.3",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "ThirdPartyNotices.txt",
+        "build/netcoreapp2.1/Microsoft.TestPlatform.PlatformAbstractions.dll",
         "build/netcoreapp2.1/Microsoft.TestPlatform.TestHost.props",
+        "build/netcoreapp2.1/x64/Microsoft.TestPlatform.PlatformAbstractions.dll",
         "build/netcoreapp2.1/x64/testhost.dll",
         "build/netcoreapp2.1/x64/testhost.exe",
+        "build/netcoreapp2.1/x86/Microsoft.TestPlatform.PlatformAbstractions.dll",
         "build/netcoreapp2.1/x86/testhost.x86.dll",
         "build/netcoreapp2.1/x86/testhost.x86.exe",
         "build/uap10.0/Microsoft.TestPlatform.TestHost.props",
@@ -3612,9 +3614,12 @@
         "build/uap10.0/zh-Hant/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll",
         "lib/net45/_._",
         "lib/netcoreapp2.1/Microsoft.TestPlatform.CommunicationUtilities.dll",
+        "lib/netcoreapp2.1/Microsoft.TestPlatform.CoreUtilities.dll",
         "lib/netcoreapp2.1/Microsoft.TestPlatform.CrossPlatEngine.dll",
+        "lib/netcoreapp2.1/Microsoft.TestPlatform.PlatformAbstractions.dll",
         "lib/netcoreapp2.1/Microsoft.TestPlatform.Utilities.dll",
         "lib/netcoreapp2.1/Microsoft.VisualStudio.TestPlatform.Common.dll",
+        "lib/netcoreapp2.1/Microsoft.VisualStudio.TestPlatform.ObjectModel.dll",
         "lib/netcoreapp2.1/cs/Microsoft.TestPlatform.CommunicationUtilities.resources.dll",
         "lib/netcoreapp2.1/cs/Microsoft.TestPlatform.CrossPlatEngine.resources.dll",
         "lib/netcoreapp2.1/cs/Microsoft.VisualStudio.TestPlatform.Common.resources.dll",
@@ -3659,11 +3664,14 @@
         "lib/netcoreapp2.1/zh-Hant/Microsoft.TestPlatform.CrossPlatEngine.resources.dll",
         "lib/netcoreapp2.1/zh-Hant/Microsoft.VisualStudio.TestPlatform.Common.resources.dll",
         "lib/uap10.0/Microsoft.TestPlatform.CommunicationUtilities.dll",
+        "lib/uap10.0/Microsoft.TestPlatform.CoreUtilities.dll",
         "lib/uap10.0/Microsoft.TestPlatform.CrossPlatEngine.dll",
+        "lib/uap10.0/Microsoft.TestPlatform.PlatformAbstractions.dll",
         "lib/uap10.0/Microsoft.TestPlatform.Utilities.dll",
         "lib/uap10.0/Microsoft.VisualStudio.TestPlatform.Common.dll",
+        "lib/uap10.0/Microsoft.VisualStudio.TestPlatform.ObjectModel.dll",
         "lib/uap10.0/testhost.dll",
-        "microsoft.testplatform.testhost.16.7.1.nupkg.sha512",
+        "microsoft.testplatform.testhost.16.8.3.nupkg.sha512",
         "microsoft.testplatform.testhost.nuspec"
       ]
     },
@@ -3795,10 +3803,81 @@
         "x64/native/windows/mongocrypt.dll"
       ]
     },
-    "MSTest.TestAdapter/2.1.1": {
-      "sha512": "913cbQHPnGOCCYJKPDqcjI1IbPkugHOiheuSmd5m4LKLdXJbKJX1AxUu7F7uAMxCNdtLA34ZOgFe5WNDcWhY2Q==",
+    "MSBuild.SonarQube.Runner.Tool/4.8.0": {
+      "sha512": "GhjJAK7swEr+tExlJIDQLwx6zu8HV+hzeUmCR3bymbe3RzkuttkaeaOQ8c6T7warxI6yK8LSZXBpiu2ENEHuQA==",
       "type": "package",
-      "path": "mstest.testadapter/2.1.1",
+      "path": "msbuild.sonarqube.runner.tool/4.8.0",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "msbuild.sonarqube.runner.tool.4.8.0.nupkg.sha512",
+        "msbuild.sonarqube.runner.tool.nuspec",
+        "tools/sonar-scanner-msbuild-4.8.0.12008-net46/MSBuild.SonarQube.Runner.exe",
+        "tools/sonar-scanner-msbuild-4.8.0.12008-net46/Microsoft.VisualStudio.Setup.Configuration.Interop.dll",
+        "tools/sonar-scanner-msbuild-4.8.0.12008-net46/Newtonsoft.Json.dll",
+        "tools/sonar-scanner-msbuild-4.8.0.12008-net46/SonarQube.Analysis.xml",
+        "tools/sonar-scanner-msbuild-4.8.0.12008-net46/SonarQube.Scanner.MSBuild.exe",
+        "tools/sonar-scanner-msbuild-4.8.0.12008-net46/SonarScanner.MSBuild.Common.dll",
+        "tools/sonar-scanner-msbuild-4.8.0.12008-net46/SonarScanner.MSBuild.PostProcessor.dll",
+        "tools/sonar-scanner-msbuild-4.8.0.12008-net46/SonarScanner.MSBuild.PreProcessor.dll",
+        "tools/sonar-scanner-msbuild-4.8.0.12008-net46/SonarScanner.MSBuild.Shim.dll",
+        "tools/sonar-scanner-msbuild-4.8.0.12008-net46/SonarScanner.MSBuild.TFS.Classic.dll",
+        "tools/sonar-scanner-msbuild-4.8.0.12008-net46/SonarScanner.MSBuild.TFS.dll",
+        "tools/sonar-scanner-msbuild-4.8.0.12008-net46/SonarScanner.MSBuild.Tasks.dll",
+        "tools/sonar-scanner-msbuild-4.8.0.12008-net46/SonarScanner.MSBuild.exe",
+        "tools/sonar-scanner-msbuild-4.8.0.12008-net46/System.Runtime.InteropServices.RuntimeInformation.dll",
+        "tools/sonar-scanner-msbuild-4.8.0.12008-net46/System.ValueTuple.dll",
+        "tools/sonar-scanner-msbuild-4.8.0.12008-net46/Targets/SonarQube.Integration.ImportBefore.targets",
+        "tools/sonar-scanner-msbuild-4.8.0.12008-net46/Targets/SonarQube.Integration.targets",
+        "tools/sonar-scanner-msbuild-4.8.0.12008-net46/sonar-scanner-4.2.0.1873/bin/sonar-scanner",
+        "tools/sonar-scanner-msbuild-4.8.0.12008-net46/sonar-scanner-4.2.0.1873/bin/sonar-scanner-debug",
+        "tools/sonar-scanner-msbuild-4.8.0.12008-net46/sonar-scanner-4.2.0.1873/bin/sonar-scanner-debug.bat",
+        "tools/sonar-scanner-msbuild-4.8.0.12008-net46/sonar-scanner-4.2.0.1873/bin/sonar-scanner.bat",
+        "tools/sonar-scanner-msbuild-4.8.0.12008-net46/sonar-scanner-4.2.0.1873/conf/sonar-scanner.properties",
+        "tools/sonar-scanner-msbuild-4.8.0.12008-net46/sonar-scanner-4.2.0.1873/lib/sonar-scanner-cli-4.2.0.1873.jar",
+        "tools/sonar-scanner-msbuild-4.8.0.12008-netcoreapp2.0/Newtonsoft.Json.dll",
+        "tools/sonar-scanner-msbuild-4.8.0.12008-netcoreapp2.0/SonarQube.Analysis.xml",
+        "tools/sonar-scanner-msbuild-4.8.0.12008-netcoreapp2.0/SonarScanner.MSBuild.Common.dll",
+        "tools/sonar-scanner-msbuild-4.8.0.12008-netcoreapp2.0/SonarScanner.MSBuild.PostProcessor.dll",
+        "tools/sonar-scanner-msbuild-4.8.0.12008-netcoreapp2.0/SonarScanner.MSBuild.PreProcessor.dll",
+        "tools/sonar-scanner-msbuild-4.8.0.12008-netcoreapp2.0/SonarScanner.MSBuild.Shim.dll",
+        "tools/sonar-scanner-msbuild-4.8.0.12008-netcoreapp2.0/SonarScanner.MSBuild.TFS.dll",
+        "tools/sonar-scanner-msbuild-4.8.0.12008-netcoreapp2.0/SonarScanner.MSBuild.Tasks.dll",
+        "tools/sonar-scanner-msbuild-4.8.0.12008-netcoreapp2.0/SonarScanner.MSBuild.dll",
+        "tools/sonar-scanner-msbuild-4.8.0.12008-netcoreapp2.0/SonarScanner.MSBuild.runtimeconfig.json",
+        "tools/sonar-scanner-msbuild-4.8.0.12008-netcoreapp2.0/Targets/SonarQube.Integration.ImportBefore.targets",
+        "tools/sonar-scanner-msbuild-4.8.0.12008-netcoreapp2.0/Targets/SonarQube.Integration.targets",
+        "tools/sonar-scanner-msbuild-4.8.0.12008-netcoreapp2.0/sonar-scanner-4.2.0.1873/bin/sonar-scanner",
+        "tools/sonar-scanner-msbuild-4.8.0.12008-netcoreapp2.0/sonar-scanner-4.2.0.1873/bin/sonar-scanner-debug",
+        "tools/sonar-scanner-msbuild-4.8.0.12008-netcoreapp2.0/sonar-scanner-4.2.0.1873/bin/sonar-scanner-debug.bat",
+        "tools/sonar-scanner-msbuild-4.8.0.12008-netcoreapp2.0/sonar-scanner-4.2.0.1873/bin/sonar-scanner.bat",
+        "tools/sonar-scanner-msbuild-4.8.0.12008-netcoreapp2.0/sonar-scanner-4.2.0.1873/conf/sonar-scanner.properties",
+        "tools/sonar-scanner-msbuild-4.8.0.12008-netcoreapp2.0/sonar-scanner-4.2.0.1873/lib/sonar-scanner-cli-4.2.0.1873.jar",
+        "tools/sonar-scanner-msbuild-4.8.0.12008-netcoreapp3.0/Newtonsoft.Json.dll",
+        "tools/sonar-scanner-msbuild-4.8.0.12008-netcoreapp3.0/SonarQube.Analysis.xml",
+        "tools/sonar-scanner-msbuild-4.8.0.12008-netcoreapp3.0/SonarScanner.MSBuild.Common.dll",
+        "tools/sonar-scanner-msbuild-4.8.0.12008-netcoreapp3.0/SonarScanner.MSBuild.PostProcessor.dll",
+        "tools/sonar-scanner-msbuild-4.8.0.12008-netcoreapp3.0/SonarScanner.MSBuild.PreProcessor.dll",
+        "tools/sonar-scanner-msbuild-4.8.0.12008-netcoreapp3.0/SonarScanner.MSBuild.Shim.dll",
+        "tools/sonar-scanner-msbuild-4.8.0.12008-netcoreapp3.0/SonarScanner.MSBuild.TFS.dll",
+        "tools/sonar-scanner-msbuild-4.8.0.12008-netcoreapp3.0/SonarScanner.MSBuild.Tasks.dll",
+        "tools/sonar-scanner-msbuild-4.8.0.12008-netcoreapp3.0/SonarScanner.MSBuild.dll",
+        "tools/sonar-scanner-msbuild-4.8.0.12008-netcoreapp3.0/SonarScanner.MSBuild.runtimeconfig.json",
+        "tools/sonar-scanner-msbuild-4.8.0.12008-netcoreapp3.0/Targets/SonarQube.Integration.ImportBefore.targets",
+        "tools/sonar-scanner-msbuild-4.8.0.12008-netcoreapp3.0/Targets/SonarQube.Integration.targets",
+        "tools/sonar-scanner-msbuild-4.8.0.12008-netcoreapp3.0/sonar-scanner-4.2.0.1873/bin/sonar-scanner",
+        "tools/sonar-scanner-msbuild-4.8.0.12008-netcoreapp3.0/sonar-scanner-4.2.0.1873/bin/sonar-scanner-debug",
+        "tools/sonar-scanner-msbuild-4.8.0.12008-netcoreapp3.0/sonar-scanner-4.2.0.1873/bin/sonar-scanner-debug.bat",
+        "tools/sonar-scanner-msbuild-4.8.0.12008-netcoreapp3.0/sonar-scanner-4.2.0.1873/bin/sonar-scanner.bat",
+        "tools/sonar-scanner-msbuild-4.8.0.12008-netcoreapp3.0/sonar-scanner-4.2.0.1873/conf/sonar-scanner.properties",
+        "tools/sonar-scanner-msbuild-4.8.0.12008-netcoreapp3.0/sonar-scanner-4.2.0.1873/lib/sonar-scanner-cli-4.2.0.1873.jar"
+      ]
+    },
+    "MSTest.TestAdapter/2.1.2": {
+      "sha512": "SjDlWk9t9cZKqyMReioqzRkZ1n4kPIqdAAYLd1vY2rEnx16aCShhSt4uXgTN0T1lNZgWE4Ge2+KVxHgxmtQ6QQ==",
+      "type": "package",
+      "path": "mstest.testadapter/2.1.2",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -3853,14 +3932,14 @@
         "build/uap10.0/MSTest.TestAdapter.props",
         "build/uap10.0/MSTest.TestAdapter.targets",
         "build/uap10.0/Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll",
-        "mstest.testadapter.2.1.1.nupkg.sha512",
+        "mstest.testadapter.2.1.2.nupkg.sha512",
         "mstest.testadapter.nuspec"
       ]
     },
-    "MSTest.TestFramework/2.1.1": {
-      "sha512": "lS552ma6LxHf7aOTNQHJa4udC3KVml+Hlzs3cEJP/caIUc6UvYMmmaPpYO3ErEL9qF4xGayeHXwAmrTiFWUAMw==",
+    "MSTest.TestFramework/2.1.2": {
+      "sha512": "DXTDuBumPC4oo9KKZMt5zgOuLdfUjqcsLRLyqeubaIxfl7ZBfk8wfsKRWYd1m5aCL3ekifW5pwT3rwuB2mDdLw==",
       "type": "package",
-      "path": "mstest.testframework/2.1.1",
+      "path": "mstest.testframework/2.1.2",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -3955,7 +4034,7 @@
         "lib/uap10.0/zh-Hans/Microsoft.VisualStudio.TestPlatform.TestFramework.xml",
         "lib/uap10.0/zh-Hant/Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml",
         "lib/uap10.0/zh-Hant/Microsoft.VisualStudio.TestPlatform.TestFramework.xml",
-        "mstest.testframework.2.1.1.nupkg.sha512",
+        "mstest.testframework.2.1.2.nupkg.sha512",
         "mstest.testframework.nuspec"
       ]
     },
@@ -6314,10 +6393,10 @@
         "system.resources.resourcemanager.nuspec"
       ]
     },
-    "System.Runtime/4.3.0": {
-      "sha512": "JufQi0vPQ0xGnAczR13AUFglDyVYt4Kqnz1AZaiKZ5+GICq0/1MH/mO/eAJHt/mHW1zjKBJd7kV26SrxddAhiw==",
+    "System.Runtime/4.3.1": {
+      "sha512": "abhfv1dTK6NXOmu4bgHIONxHyEqFjW8HwXPmpY9gmll+ix9UNo4XDcmzJn6oLooftxNssVHdJC1pGT9jkSynQg==",
       "type": "package",
-      "path": "system.runtime/4.3.0",
+      "path": "system.runtime/4.3.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -6402,7 +6481,7 @@
         "ref/xamarinmac20/_._",
         "ref/xamarintvos10/_._",
         "ref/xamarinwatchos10/_._",
-        "system.runtime.4.3.0.nupkg.sha512",
+        "system.runtime.4.3.1.nupkg.sha512",
         "system.runtime.nuspec"
       ]
     },
@@ -7728,9 +7807,9 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
-      "MSTest.TestAdapter >= 2.1.1",
-      "MSTest.TestFramework >= 2.1.1",
-      "Microsoft.NET.Test.Sdk >= 16.7.1",
+      "MSTest.TestAdapter >= 2.1.2",
+      "MSTest.TestFramework >= 2.1.2",
+      "Microsoft.NET.Test.Sdk >= 16.8.3",
       "Shared >= 1.0.0",
       "Shop_Test >= 1.0.0",
       "Tamago_Bank >= 1.0.0",
@@ -7788,15 +7867,15 @@
         "dependencies": {
           "MSTest.TestAdapter": {
             "target": "Package",
-            "version": "[2.1.1, )"
+            "version": "[2.1.2, )"
           },
           "MSTest.TestFramework": {
             "target": "Package",
-            "version": "[2.1.1, )"
+            "version": "[2.1.2, )"
           },
           "Microsoft.NET.Test.Sdk": {
             "target": "Package",
-            "version": "[16.7.1, )"
+            "version": "[16.8.3, )"
           },
           "coverlet.collector": {
             "target": "Package",
@@ -7824,27 +7903,5 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "NU1701",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Package 'Apache.NMS 1.7.1' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETCoreApp,Version=v3.1'. This package may not be fully compatible with your project.",
-      "libraryId": "Apache.NMS",
-      "targetGraphs": [
-        ".NETCoreApp,Version=v3.1"
-      ]
-    },
-    {
-      "code": "NU1701",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Package 'Apache.NMS.ActiveMQ 1.7.2' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETCoreApp,Version=v3.1'. This package may not be fully compatible with your project.",
-      "libraryId": "Apache.NMS.ActiveMQ",
-      "targetGraphs": [
-        ".NETCoreApp,Version=v3.1"
-      ]
-    }
-  ]
+  }
 }

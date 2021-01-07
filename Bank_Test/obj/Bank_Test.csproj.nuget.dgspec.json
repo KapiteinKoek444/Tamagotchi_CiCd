@@ -52,15 +52,15 @@
           "dependencies": {
             "MSTest.TestAdapter": {
               "target": "Package",
-              "version": "[2.1.1, )"
+              "version": "[2.1.2, )"
             },
             "MSTest.TestFramework": {
               "target": "Package",
-              "version": "[2.1.1, )"
+              "version": "[2.1.2, )"
             },
             "Microsoft.NET.Test.Sdk": {
               "target": "Package",
-              "version": "[16.7.1, )"
+              "version": "[16.8.3, )"
             },
             "coverlet.collector": {
               "target": "Package",
@@ -127,7 +127,7 @@
           "dependencies": {
             "Apache.NMS.ActiveMQ": {
               "target": "Package",
-              "version": "[1.7.2, )"
+              "version": "[1.8.0, )"
             },
             "Consul": {
               "target": "Package",
@@ -150,6 +150,10 @@
               "version": "[2.11.5, )"
             },
             "MongoDB.Driver": {
+              "target": "Package",
+              "version": "[2.11.5, )"
+            },
+            "MongoDB.Driver.Core": {
               "target": "Package",
               "version": "[2.11.5, )"
             },
@@ -223,15 +227,15 @@
           "dependencies": {
             "MSTest.TestAdapter": {
               "target": "Package",
-              "version": "[2.1.1, )"
+              "version": "[2.1.2, )"
             },
             "MSTest.TestFramework": {
               "target": "Package",
-              "version": "[2.1.1, )"
+              "version": "[2.1.2, )"
             },
             "Microsoft.NET.Test.Sdk": {
               "target": "Package",
-              "version": "[16.7.1, )"
+              "version": "[16.8.3, )"
             },
             "coverlet.collector": {
               "target": "Package",
@@ -300,6 +304,10 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "dependencies": {
+            "MSBuild.SonarQube.Runner.Tool": {
+              "target": "Package",
+              "version": "[4.8.0, )"
+            },
             "MongoDB.Driver": {
               "target": "Package",
               "version": "[2.11.5, )"
@@ -367,6 +375,10 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "dependencies": {
+            "MSBuild.SonarQube.Runner.Tool": {
+              "target": "Package",
+              "version": "[4.8.0, )"
+            },
             "MongoDB.Driver": {
               "target": "Package",
               "version": "[2.11.5, )"
