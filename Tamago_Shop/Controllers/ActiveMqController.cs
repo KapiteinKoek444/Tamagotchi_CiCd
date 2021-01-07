@@ -92,7 +92,7 @@ namespace Tamago_Shop.Controllers
 			{
 				_activeMQLogBank.ConnectSender("Inv.shopAddReceive.queue");
 				var producer = _activeMQLogBank.GetMessageProducer();
-				producer.Send(received);
+				producer.Send(message);
 			}
 		}
 
@@ -135,7 +135,9 @@ namespace Tamago_Shop.Controllers
 				response.items.Add(m);
 			}
 
-			producer.Send(response);
+			var newMessage = _activeMQLogInvItems.ConvertObjectToIMessage(response);
+
+			producer.Send(newMessage);
 		}
 
 		[HttpGet]
