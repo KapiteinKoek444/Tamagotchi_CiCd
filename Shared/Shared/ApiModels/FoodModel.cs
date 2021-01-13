@@ -1,8 +1,10 @@
 ﻿using MongoDB.Bson.Serialization.Attributes;
 using System;
+using System.Diagnostics.CodeAnalysis;
 
 namespace Shared.Shared.ApiModels
 {
+	[ExcludeFromCodeCoverage]
 	public class FoodModel
 	{
 		[BsonId]

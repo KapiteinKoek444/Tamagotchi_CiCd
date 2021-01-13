@@ -35,7 +35,6 @@ C:\Users\Pouki\Documents\#Rep_C#\S3_Tamagotchi_Project\Tamago_WebApi's\Tamago_Ba
 C:\Users\Pouki\Documents\#Rep_C#\S3_Tamagotchi_Project\Tamago_WebApi's\Tamago_Bank\obj\Debug\netcoreapp3.1\Tamago_Bank.dll
 C:\Users\Pouki\Documents\#Rep_C#\S3_Tamagotchi_Project\Tamago_WebApi's\Tamago_Bank\obj\Debug\netcoreapp3.1\Tamago_Bank.pdb
 C:\Users\Pouki\Documents\#Rep_C#\S3_Tamagotchi_Project\Tamago_WebApi's\Tamago_Bank\obj\Debug\netcoreapp3.1\Tamago_Bank.genruntimeconfig.cache
-C:\Users\Pouki\Documents\#Rep_C\#Fontys_S3\S3_Tamago_WebApi's\Tamago_Bank\obj\Debug\netcoreapp3.1\Tamago_Bank.csprojAssemblyReference.cache
 C:\Users\Pouki\Documents\#Rep_C\#Fontys_S3\S3_Tamago_WebApi's\Tamago_Bank\obj\Debug\netcoreapp3.1\Tamago_Bank.csproj.CoreCompileInputs.cache
 C:\Users\Pouki\Documents\#Rep_C\#Fontys_S3\S3_Tamago_WebApi's\Tamago_Bank\obj\Debug\netcoreapp3.1\Tamago_Bank.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\Pouki\Documents\#Rep_C\#Fontys_S3\S3_Tamago_WebApi's\Tamago_Bank\obj\Debug\netcoreapp3.1\Tamago_Bank.dll
@@ -75,3 +74,4 @@ C:\Users\Pouki\Documents\#Rep_C\#Fontys_S3\S3_Tamago_WebApi's\Tamago_Bank\obj\De
 C:\Users\Pouki\Documents\#Rep_C\#Fontys_S3\S3_Tamago_WebApi's\Tamago_Bank\bin\Debug\netcoreapp3.1\snappy32.dll
 C:\Users\Pouki\Documents\#Rep_C\#Fontys_S3\S3_Tamago_WebApi's\Tamago_Bank\bin\Debug\netcoreapp3.1\snappy64.dll
 C:\Users\Pouki\Documents\#Rep_C\#Fontys_S3\S3_Tamago_WebApi's\Tamago_Bank\bin\Debug\netcoreapp3.1\libzstd.dll
+C:\Users\Pouki\Documents\#Rep_C\#Fontys_S3\S3_Tamago_WebApi's\Tamago_Bank\obj\Debug\netcoreapp3.1\Tamago_Bank.csprojAssemblyReference.cache

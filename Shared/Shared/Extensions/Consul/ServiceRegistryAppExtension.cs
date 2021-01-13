@@ -5,9 +5,11 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Shared.Extensions.Consul;
 using System;
+using System.Diagnostics.CodeAnalysis;
 
 namespace UserManagement.Config
 {
+    [ExcludeFromCodeCoverage]
     public static class ServiceRegistryAppExtension
     {
         public static IServiceCollection AddConsulConfig(this IServiceCollection services, ConfigurationSetting configurationSetting)

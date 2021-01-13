@@ -152,6 +152,10 @@
               "target": "Package",
               "version": "[16.8.3, )"
             },
+            "NETStandard.Library": {
+              "target": "Package",
+              "version": "[2.0.3, )"
+            },
             "coverlet.collector": {
               "target": "Package",
               "version": "[1.3.0, )"

@@ -5,7 +5,9 @@ using Shared.Extensions.ActiveMQ;
 using Shared.Shared.ActiveMQ_Models;
 using Shared.Shared.ApiModels;
 using System;
+using System.Diagnostics.CodeAnalysis;
 using System.Linq;
+using System.Threading.Tasks;
 
 namespace Tamago_Bank.Controllers
 {
@@ -25,7 +27,8 @@ namespace Tamago_Bank.Controllers
 			ListenToMessage();
 		}
 
-		public async void ListenToMessage()
+		[ExcludeFromCodeCoverage]
+		private async void ListenToMessage()
 		{
 			_activeMQLog.ConnectListener("Shop.buyItem.queue");
 			var listener = _activeMQLog.GetMessageConsumer();
@@ -33,7 +36,8 @@ namespace Tamago_Bank.Controllers
 			listener.Listener += new MessageListener(UponMessage);
 		}
 
-		public void UponMessage(IMessage received)
+		[ExcludeFromCodeCoverage]
+		private async void UponMessage(IMessage received)
 		{
 			_activeMQLog.ConnectSender("Bank.buyItemResponse.queue");
 			var producer = _activeMQLog.GetMessageProducer();
@@ -49,17 +53,18 @@ namespace Tamago_Bank.Controllers
 			else
 				m.confirmation = true;
 
-			var update = Builders<WalletModel>.Update.Set("balance", data.balance - m.price);
-			_bankcollection.UpdateOne(filter, update);
+			WalletModel currWallet = _bankcollection.Find(x => x.userId == id).FirstOrDefault();
+			currWallet.balance = currWallet.balance - m.price;
+			_bankcollection.ReplaceOne(x => x.userId.Equals(currWallet.userId), currWallet, new ReplaceOptions { IsUpsert = true });
 
 			var res = _activeMQLog.ConvertObjectToIMessage<ItemModel>(m);
 			producer.Send(res);
 		}
 
 		[HttpGet]
-		public async void Get()
+		public async Task<string> Get()
 		{
-			
+			return "activeMq controller loaded";
 		}
 	}
 }

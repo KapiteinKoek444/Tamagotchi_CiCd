@@ -6,6 +6,7 @@ using Shared.Shared.ActiveMQ_Models;
 using Shared.Shared.ApiModels;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -35,7 +36,8 @@ namespace Tamago_Inventory.Controllers
 			ListenToMessage();
 		}
 
-		public async void ListenToMessage()
+		[ExcludeFromCodeCoverage]
+		private async void ListenToMessage()
 		{
 			//Shop
 			_activeMQLogShop.ConnectListener("Inv.shopAddReceive.queue");
@@ -59,7 +61,8 @@ namespace Tamago_Inventory.Controllers
 			return response.items;
 		}
 
-		public async Task<string> WaitForFood(InventoryModel data)
+		[ExcludeFromCodeCoverage]
+		private async Task<string> WaitForFood(InventoryModel data)
 		{
 			RequestItemModel model = new RequestItemModel();
 			model.Items = data.itemId;
@@ -77,14 +80,16 @@ namespace Tamago_Inventory.Controllers
 			return "";
 		}
 
-		public async void UponShopGetMessage(IMessage message)
+		[ExcludeFromCodeCoverage]
+		private async void UponShopGetMessage(IMessage message)
 		{
 			ITextMessage objectMessage = message as ITextMessage;
 			response = _activeMQLog.ConvertIMessageToObject<RequestItemResponseModel>(objectMessage);
 			received = true;
 		}
 
-		public async void UponShopBuyMessage(IMessage message)
+		[ExcludeFromCodeCoverage]
+		private async void UponShopBuyMessage(IMessage message)
 		{
 
 			_activeMQLogShop.ConnectSender("Inv.shopAddSend.queue");
@@ -106,9 +111,9 @@ namespace Tamago_Inventory.Controllers
 		}
 
 		[HttpGet]
-		public async void Get()
+		public async Task<string> Get()
 		{
-
+			return "activeMq controller loaded";
 		}
 	}
 }

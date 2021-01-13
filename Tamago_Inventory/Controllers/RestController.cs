@@ -5,6 +5,7 @@ using Shared.Shared.ApiModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 
 namespace Tamago_Inventory.Controllers
 {
@@ -46,10 +47,10 @@ namespace Tamago_Inventory.Controllers
 
 		[HttpPost]
 		[Route("post")]
-		public IActionResult Post([FromBody] InventoryModel inv)
+		public async Task<IActionResult> Post([FromBody] InventoryModel inv)
 		{
-			_inventoryCollection.InsertOne(inv);
-			return StatusCode(StatusCodes.Status201Created, inv);
+			await _inventoryCollection.ReplaceOneAsync(x => x.userId.Equals(inv.userId), inv, new ReplaceOptions { IsUpsert = true });
+			return Ok(inv);
 		}
 
 		[HttpPost("{id}")]

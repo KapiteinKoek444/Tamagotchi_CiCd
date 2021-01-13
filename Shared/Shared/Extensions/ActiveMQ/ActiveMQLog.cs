@@ -6,9 +6,11 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using Newtonsoft.Json;
+using System.Diagnostics.CodeAnalysis;
 
 namespace Shared.Extensions.ActiveMQ
 {
+    [ExcludeFromCodeCoverage]
     public class ActiveMQLog : IActiveMqLog
     {
 

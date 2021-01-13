@@ -6,6 +6,7 @@ using Shared.Shared.ActiveMQ_Models;
 using Shared.Shared.ApiModels;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -34,7 +35,8 @@ namespace Tamago_Shop.Controllers
 			ListenToMessage();
 		}
 
-		public async void ListenToMessage()
+		[ExcludeFromCodeCoverage]
+		private async void ListenToMessage()
 		{
 			//Bank
 			_activeMQLogBank.ConnectListener("Bank.buyItemResponse.queue");
@@ -63,7 +65,8 @@ namespace Tamago_Shop.Controllers
 			return r;
 		}
 
-		public async Task<string> AddFoodToInventory(FoodModel food, Guid userId)
+		[ExcludeFromCodeCoverage]
+		private async Task<string> AddFoodToInventory(FoodModel food, Guid userId)
 		{
 			ItemModel model = new ItemModel();
 			model.itemId = food.id;
@@ -83,7 +86,8 @@ namespace Tamago_Shop.Controllers
 			return "bought item!";
 		}
 
-		public async void UponBankMessage(IMessage message)
+		[ExcludeFromCodeCoverage]
+		private async void UponBankMessage(IMessage message)
 		{
 			ITextMessage objectMessage = message as ITextMessage;
 			ItemModel received = _activeMQLogBank.ConvertIMessageToObject<ItemModel>(objectMessage);
@@ -96,7 +100,8 @@ namespace Tamago_Shop.Controllers
 			}
 		}
 
-		public async void UponInvMessage(IMessage message)
+		[ExcludeFromCodeCoverage]
+		private async void UponInvMessage(IMessage message)
 		{
 			ITextMessage objectMessage = message as ITextMessage;
 			ItemModel received = _activeMQLogInv.ConvertIMessageToObject<ItemModel>(objectMessage);
@@ -105,7 +110,8 @@ namespace Tamago_Shop.Controllers
 				added = true;
 		}
 
-		public async void UponInvGetMessage(IMessage message)
+		[ExcludeFromCodeCoverage]
+		private async void UponInvGetMessage(IMessage message)
 		{
 			_activeMQLogInvItems.ConnectSender("Inv.foodReceive.queue");
 			var producer = _activeMQLogInvItems.GetMessageProducer();
@@ -141,9 +147,9 @@ namespace Tamago_Shop.Controllers
 		}
 
 		[HttpGet]
-		public async void Get()
+		public async Task<string> Get()
 		{
-
+			return "activeMq controller loaded";
 		}
 	}
 }

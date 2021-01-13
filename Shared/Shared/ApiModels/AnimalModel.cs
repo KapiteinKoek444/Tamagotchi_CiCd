@@ -1,9 +1,11 @@
 ﻿using MongoDB.Bson.Serialization.Attributes;
 using System;
+using System.Diagnostics.CodeAnalysis;
 
 namespace Shared.Shared.ApiModels
 {
-	public class AnimalModel
+    [ExcludeFromCodeCoverage]
+    public class AnimalModel
 	{
         [BsonId]
         public Guid Id { get; set; }
