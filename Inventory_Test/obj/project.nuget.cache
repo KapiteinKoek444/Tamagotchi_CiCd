@@ -1,13 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "ipta4k+TMCg4jtlEGF5fDFszsUrS+3IQAdi1KVE1KiyhRvs5z1a1Axpsqw/7CqW3Z5uwCLx2Ld9rYxu/2vhLFg==",
+  "dgSpecHash": "znJcncM4cqmvAEkshW7gAGF3K2UfEjvxhC0zTU2hUqKsM7RbRHN7mgYT16cekLbeWuMMmAZgJIvj70gwV6Amwg==",
   "success": true,
   "projectFilePath": "C:\\Users\\Pouki\\Documents\\#Rep_C\\#Fontys_S3\\S3_Tamago_WebApi's\\Inventory_Test\\Inventory_Test.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Pouki\\.nuget\\packages\\apache.nms\\1.8.0\\apache.nms.1.8.0.nupkg.sha512",
     "C:\\Users\\Pouki\\.nuget\\packages\\apache.nms.activemq\\1.8.0\\apache.nms.activemq.1.8.0.nupkg.sha512",
     "C:\\Users\\Pouki\\.nuget\\packages\\consul\\1.6.1.1\\consul.1.6.1.1.nupkg.sha512",
-    "C:\\Users\\Pouki\\.nuget\\packages\\coverlet.collector\\1.3.0\\coverlet.collector.1.3.0.nupkg.sha512",
+    "C:\\Users\\Pouki\\.nuget\\packages\\coverlet.collector\\3.0.0\\coverlet.collector.3.0.0.nupkg.sha512",
     "C:\\Users\\Pouki\\.nuget\\packages\\dnsclient\\1.3.1\\dnsclient.1.3.1.nupkg.sha512",
     "C:\\Users\\Pouki\\.nuget\\packages\\json.net\\1.0.23\\json.net.1.0.23.nupkg.sha512",
     "C:\\Users\\Pouki\\.nuget\\packages\\microsoft.aspnetcore\\2.2.0\\microsoft.aspnetcore.2.2.0.nupkg.sha512",
