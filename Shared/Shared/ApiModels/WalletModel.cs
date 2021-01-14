@@ -9,7 +9,6 @@ namespace Shared.Shared.ApiModels
 	[ExcludeFromCodeCoverage]
 	public class WalletModel
 	{
-		[BsonId]
 		public Guid id { get; set; }
 		public Guid userId { get; set; }
 

@@ -7,7 +7,6 @@ namespace Shared.Shared.ApiModels
 	[ExcludeFromCodeCoverage]
 	public class FoodModel
 	{
-		[BsonId]
 		public Guid id { get; set; }
 
 		public string name { get; set; }

@@ -7,7 +7,6 @@ namespace Shared.Shared.ApiModels
 	[ExcludeFromCodeCoverage]
 	public class AnimalModel
 	{
-		[BsonId]
 		public Guid Id { get; set; }
 		public Guid UserId { get; set; }
 

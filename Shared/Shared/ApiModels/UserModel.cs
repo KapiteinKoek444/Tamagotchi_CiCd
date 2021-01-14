@@ -9,7 +9,6 @@ namespace Shared.Shared.ApiModels
 	[ExcludeFromCodeCoverage]
 	public class UserModel
 	{
-		[BsonId]
 		public Guid Id { get; set; }
 
 		public string Email { get; set; }

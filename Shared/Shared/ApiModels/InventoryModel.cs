@@ -8,7 +8,6 @@ namespace Shared.Shared.ApiModels
 	[ExcludeFromCodeCoverage]
 	public class InventoryModel
 	{
-		[BsonId]
 		public Guid id { get; set; }
 		public Guid userId { get; set; }
 
