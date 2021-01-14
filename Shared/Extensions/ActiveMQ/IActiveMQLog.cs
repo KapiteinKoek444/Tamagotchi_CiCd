@@ -1,6 +1,5 @@
 ﻿using Apache.NMS;
 using System;
-using System.Diagnostics.CodeAnalysis;
 
 namespace Shared.Extensions.ActiveMQ
 {

@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
@@ -7,44 +7,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Remove="C:\Users\Pouki\.nuget\packages\mongodb.driver.core\2.11.5\contentFiles\any\netstandard2.0\Core\Compression\Snappy\lib\win\snappy32.dll" />
-    <Content Remove="C:\Users\Pouki\.nuget\packages\mongodb.driver.core\2.11.5\contentFiles\any\netstandard2.0\Core\Compression\Snappy\lib\win\snappy64.dll" />
-    <Content Remove="C:\Users\Pouki\.nuget\packages\mongodb.driver.core\2.11.5\contentFiles\any\netstandard2.0\Core\Compression\Zstandard\lib\win\libzstd.dll" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Include="Shared\Shared.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <PackageReference Include="Apache.NMS.ActiveMQ" Version="1.8.0" />
+    <PackageReference Include="Apache.NMS.ActiveMQ" Version="1.7.2" />
     <PackageReference Include="Consul" Version="1.6.1.1" />
     <PackageReference Include="Json.Net" Version="1.0.23" />
     <PackageReference Include="Microsoft.AspNetCore" Version="2.2.0" />
-    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="5.0.0" />
-    <PackageReference Include="MongoDB.Bson" Version="2.11.5" />
-    <PackageReference Include="MongoDB.Driver" Version="2.11.5" />
-    <PackageReference Include="MongoDB.Driver.Core" Version="2.11.5" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="3.1.9" />
     <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Content Remove="C:\Users\Pouki\.nuget\packages\mongodb.driver.core\2.11.5\build\../runtimes/win/native/libzstd.dll" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Content Remove="C:\Users\Pouki\.nuget\packages\mongodb.driver.core\2.11.5\build\../runtimes/win/native/libzstd.dll" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Content Remove="C:\Users\Pouki\.nuget\packages\mongodb.driver.core\2.11.5\build\../runtimes/win/native/snappy64.dll" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Content Remove="C:\Users\Pouki\.nuget\packages\mongodb.driver.core\2.11.5\build\../runtimes/win/native/libzstd.dll" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Content Remove="C:\Users\Pouki\.nuget\packages\mongodb.driver.core\2.11.5\build\../runtimes/win/native/snappy32.dll" />
-  </ItemGroup>
 </Project>

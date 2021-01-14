@@ -6,11 +6,9 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using Newtonsoft.Json;
-using System.Diagnostics.CodeAnalysis;
 
 namespace Shared.Extensions.ActiveMQ
 {
-    [ExcludeFromCodeCoverage]
     public class ActiveMQLog : IActiveMqLog
     {
 
@@ -20,7 +18,7 @@ namespace Shared.Extensions.ActiveMQ
         private  IMessageProducer messageProducer;
         private  IMessageConsumer messageConsumer;
         private IConnection _connection;
-        private bool SessionActive;
+        private bool SessionActive = false;
 
         public ActiveMQLog(string mqUrl, string username, string password)
         {

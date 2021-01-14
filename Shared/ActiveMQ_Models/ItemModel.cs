@@ -6,10 +6,13 @@ using System.Threading.Tasks;
 
 namespace Shared.Shared.ActiveMQ_Models
 {
-	[ExcludeFromCodeCoverage]
-	public class RequestItemModel
+    [ExcludeFromCodeCoverage]
+	public class ItemModel
 	{
+		public Guid itemId;
 		public Guid userId;
-		public List<Guid> Items;
+
+		public double price;
+		public bool confirmation;
 	}
 }

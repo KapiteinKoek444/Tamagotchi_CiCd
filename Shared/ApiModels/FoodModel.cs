@@ -1,10 +1,11 @@
-﻿using MongoDB.Bson.Serialization.Attributes;
-using System;
+﻿using System;
+using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
+using System.Text;
 
 namespace Shared.Shared.ApiModels
 {
-	[ExcludeFromCodeCoverage]
+    [ExcludeFromCodeCoverage]
 	public class FoodModel
 	{
 		public Guid id { get; set; }

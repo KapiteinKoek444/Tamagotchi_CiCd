@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Shared.Shared.ActiveMQ_Models
 {
-	[ExcludeFromCodeCoverage]
+    [ExcludeFromCodeCoverage]
 	public class BuyItemModel
 	{
 		public Guid itemId { get; set; }
