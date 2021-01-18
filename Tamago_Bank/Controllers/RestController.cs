@@ -48,8 +48,22 @@ namespace Tamago_Bank.Controllers
 		[Route("post")]
 		public IActionResult Post([FromBody] WalletModel wallet)
 		{
-			_walletCollection.InsertOne(wallet);
+			_walletCollection.ReplaceOneAsync(x => x.userId.Equals(wallet.userId), wallet, new ReplaceOptions { IsUpsert = true });
 			return StatusCode(StatusCodes.Status201Created, wallet);
+		}
+
+		[HttpPost("{id}")]
+		[Route("addMoney/{id}")]
+		public IActionResult AddToWallet([FromRoute] Guid id, [FromBody] double amount)
+		{
+			var filter = Builders<WalletModel>.Filter.Eq("userId", id);
+			WalletModel data = _walletCollection.Find(filter).FirstOrDefault();
+
+			data.balance += amount;
+
+			_walletCollection.ReplaceOneAsync(x => x.userId.Equals(data.userId), data, new ReplaceOptions { IsUpsert = true });
+
+			return StatusCode(StatusCodes.Status201Created, amount);
 		}
 
 		[HttpPost("{id}")]

@@ -72,6 +72,3 @@ C:\Users\Pouki\Documents\#Rep_C\#Fontys_S3\S3_Tamago_WebApi's\Tamago_Shop\obj\De
 C:\Users\Pouki\Documents\#Rep_C\#Fontys_S3\S3_Tamago_WebApi's\Tamago_Shop\obj\Debug\netcoreapp3.1\scopedcss\bundle\Tamago_Shop.styles.css
 C:\Users\Pouki\Documents\#Rep_C\#Fontys_S3\S3_Tamago_WebApi's\Tamago_Shop\obj\Debug\netcoreapp3.1\Tamago_Shop.csproj.CopyComplete
 C:\Users\Pouki\Documents\#Rep_C\#Fontys_S3\S3_Tamago_WebApi's\Tamago_Shop\obj\Debug\netcoreapp3.1\Tamago_Shop.genruntimeconfig.cache
-C:\Users\Pouki\Documents\#Rep_C\#Fontys_S3\S3_Tamago_WebApi's\Tamago_Shop\bin\Debug\netcoreapp3.1\snappy32.dll
-C:\Users\Pouki\Documents\#Rep_C\#Fontys_S3\S3_Tamago_WebApi's\Tamago_Shop\bin\Debug\netcoreapp3.1\snappy64.dll
-C:\Users\Pouki\Documents\#Rep_C\#Fontys_S3\S3_Tamago_WebApi's\Tamago_Shop\bin\Debug\netcoreapp3.1\libzstd.dll
