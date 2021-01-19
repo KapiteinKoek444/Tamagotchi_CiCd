@@ -2,25 +2,26 @@
   "version": 3,
   "targets": {
     ".NETCoreApp,Version=v3.1": {
-      "Apache.NMS/1.7.1": {
+      "Apache.NMS/1.8.0": {
         "type": "package",
         "compile": {
-          "lib/net40/Apache.NMS.dll": {}
+          "lib/netstandard2.0/Apache.NMS.dll": {}
         },
         "runtime": {
-          "lib/net40/Apache.NMS.dll": {}
+          "lib/netstandard2.0/Apache.NMS.dll": {}
         }
       },
-      "Apache.NMS.ActiveMQ/1.7.2": {
+      "Apache.NMS.ActiveMQ/1.8.0": {
         "type": "package",
         "dependencies": {
-          "Apache.NMS": "1.7.1"
+          "Apache.NMS": "1.8.0",
+          "System.Runtime": "4.3.1"
         },
         "compile": {
-          "lib/net40/Apache.NMS.ActiveMQ.dll": {}
+          "lib/netstandard2.0/Apache.NMS.ActiveMQ.dll": {}
         },
         "runtime": {
-          "lib/net40/Apache.NMS.ActiveMQ.dll": {}
+          "lib/netstandard2.0/Apache.NMS.ActiveMQ.dll": {}
         }
       },
       "Consul/1.6.1.1": {
@@ -58,6 +59,9 @@
         "runtime": {
           "lib/netstandard2.0/Json.Net.dll": {}
         }
+      },
+      "Microsoft.AspNet.SignalR/2.4.1": {
+        "type": "package"
       },
       "Microsoft.AspNetCore/2.2.0": {
         "type": "package",
@@ -596,7 +600,7 @@
           "lib/netcoreapp2.0/Microsoft.Extensions.DependencyInjection.dll": {}
         }
       },
-      "Microsoft.Extensions.DependencyInjection.Abstractions/3.1.9": {
+      "Microsoft.Extensions.DependencyInjection.Abstractions/5.0.0": {
         "type": "package",
         "compile": {
           "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {}
@@ -817,7 +821,7 @@
           "lib/netstandard1.0/_._": {}
         }
       },
-      "Microsoft.NETCore.Targets/1.1.0": {
+      "Microsoft.NETCore.Targets/1.1.3": {
         "type": "package",
         "compile": {
           "lib/netstandard1.0/_._": {}
@@ -1076,7 +1080,7 @@
           "ref/netstandard1.3/Microsoft.Win32.Primitives.dll": {}
         }
       },
-      "MongoDB.Bson/2.11.2": {
+      "MongoDB.Bson/2.11.5": {
         "type": "package",
         "compile": {
           "lib/netstandard2.0/MongoDB.Bson.dll": {}
@@ -1085,11 +1089,11 @@
           "lib/netstandard2.0/MongoDB.Bson.dll": {}
         }
       },
-      "MongoDB.Driver/2.11.2": {
+      "MongoDB.Driver/2.11.5": {
         "type": "package",
         "dependencies": {
-          "MongoDB.Bson": "2.11.2",
-          "MongoDB.Driver.Core": "2.11.2",
+          "MongoDB.Bson": "2.11.5",
+          "MongoDB.Driver.Core": "2.11.5",
           "MongoDB.Libmongocrypt": "1.0.0"
         },
         "compile": {
@@ -1099,11 +1103,11 @@
           "lib/netstandard2.0/MongoDB.Driver.dll": {}
         }
       },
-      "MongoDB.Driver.Core/2.11.2": {
+      "MongoDB.Driver.Core/2.11.5": {
         "type": "package",
         "dependencies": {
           "DnsClient": "1.3.1",
-          "MongoDB.Bson": "2.11.2",
+          "MongoDB.Bson": "2.11.5",
           "MongoDB.Libmongocrypt": "1.0.0",
           "SharpCompress": "0.23.0",
           "System.Buffers": "4.4.0"
@@ -2000,11 +2004,11 @@
           "ref/netstandard1.0/System.Resources.ResourceManager.dll": {}
         }
       },
-      "System.Runtime/4.3.0": {
+      "System.Runtime/4.3.1": {
         "type": "package",
         "dependencies": {
-          "Microsoft.NETCore.Platforms": "1.1.0",
-          "Microsoft.NETCore.Targets": "1.1.0"
+          "Microsoft.NETCore.Platforms": "1.1.1",
+          "Microsoft.NETCore.Targets": "1.1.3"
         },
         "compile": {
           "ref/netstandard1.5/System.Runtime.dll": {}
@@ -2483,11 +2487,11 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
-          "Apache.NMS.ActiveMQ": "1.7.2",
+          "Apache.NMS.ActiveMQ": "1.8.0",
           "Consul": "1.6.1.1",
           "Json.Net": "1.0.23",
           "Microsoft.AspNetCore": "2.2.0",
-          "Microsoft.Extensions.DependencyInjection.Abstractions": "3.1.9",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "5.0.0",
           "Newtonsoft.Json": "12.0.3"
         },
         "compile": {
@@ -2501,7 +2505,8 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
         "dependencies": {
-          "MongoDB.Driver": "2.11.2",
+          "Microsoft.AspNet.SignalR": "2.4.1",
+          "MongoDB.Driver": "2.11.5",
           "Shared": "1.0.0"
         },
         "compile": {
@@ -2517,51 +2522,35 @@
     }
   },
   "libraries": {
-    "Apache.NMS/1.7.1": {
-      "sha512": "sQA+1dl1hBB0AkhBys7oJ6y9lBJnjH5xVc2aQ5bbEv/pbyMhlN8Yuo/NceYVGNdSK89ANp9XyQsaVUI975QLjg==",
+    "Apache.NMS/1.8.0": {
+      "sha512": "kN2PzpT4YLseq0SRPfI0BKZ17PlkVwBUyug1KtauoVHe4QALSIlUCW8rkB/1kPpDCjvRF093FEEVGmMUhPhSew==",
       "type": "package",
-      "path": "apache.nms/1.7.1",
+      "path": "apache.nms/1.8.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "LICENSE.txt",
         "NOTICE.txt",
-        "apache.nms.1.7.1.nupkg.sha512",
+        "apache.nms.1.8.0.nupkg.sha512",
         "apache.nms.nuspec",
-        "lib/net20-cf/Apache.NMS.dll",
-        "lib/net20-cf/Apache.NMS.pdb",
-        "lib/net20-cf/Apache.NMS.xml",
-        "lib/net20/Apache.NMS.dll",
-        "lib/net20/Apache.NMS.pdb",
-        "lib/net20/Apache.NMS.xml",
         "lib/net35/Apache.NMS.dll",
-        "lib/net35/Apache.NMS.pdb",
-        "lib/net35/Apache.NMS.xml",
         "lib/net40/Apache.NMS.dll",
-        "lib/net40/Apache.NMS.pdb",
-        "lib/net40/Apache.NMS.xml"
+        "lib/netstandard2.0/Apache.NMS.dll"
       ]
     },
-    "Apache.NMS.ActiveMQ/1.7.2": {
-      "sha512": "byKSg5/G7JGoDzSGGw4KK43/hpOGrXCtjZyjBcEjTF6ZscnrUiy8r20nyv85P55+nNmfa8q+tSF0GURd1GxYag==",
+    "Apache.NMS.ActiveMQ/1.8.0": {
+      "sha512": "YK8PGOjLWtQfT1I26so7Vg7+epDN3bTLDUti6P8sVZJ32SipG4ZZMFe8YpQck86WMQB3nL8avJzCovXW4+KzYA==",
       "type": "package",
-      "path": "apache.nms.activemq/1.7.2",
+      "path": "apache.nms.activemq/1.8.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "LICENSE.txt",
         "NOTICE.txt",
-        "apache.nms.activemq.1.7.2.nupkg.sha512",
+        "apache.nms.activemq.1.8.0.nupkg.sha512",
         "apache.nms.activemq.nuspec",
-        "lib/net20/Apache.NMS.ActiveMQ.dll",
-        "lib/net20/Apache.NMS.ActiveMQ.pdb",
-        "lib/net20/Apache.NMS.ActiveMQ.xml",
-        "lib/net35/Apache.NMS.ActiveMQ.dll",
-        "lib/net35/Apache.NMS.ActiveMQ.pdb",
-        "lib/net35/Apache.NMS.ActiveMQ.xml",
         "lib/net40/Apache.NMS.ActiveMQ.dll",
-        "lib/net40/Apache.NMS.ActiveMQ.pdb",
-        "lib/net40/Apache.NMS.ActiveMQ.xml"
+        "lib/netstandard2.0/Apache.NMS.ActiveMQ.dll"
       ]
     },
     "Consul/1.6.1.1": {
@@ -2640,6 +2629,17 @@
         "json.net.1.0.23.nupkg.sha512",
         "json.net.nuspec",
         "lib/netstandard2.0/Json.Net.dll"
+      ]
+    },
+    "Microsoft.AspNet.SignalR/2.4.1": {
+      "sha512": "aYbLVE5toZwv/qaQ0BiIZRRwN/00WKYzGjaYUWIQuI91xZ50nnAymWD1sxCZFN9XXDRq8bevM5ET9GmAeOI/Nw==",
+      "type": "package",
+      "path": "microsoft.aspnet.signalr/2.4.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "microsoft.aspnet.signalr.2.4.1.nupkg.sha512",
+        "microsoft.aspnet.signalr.nuspec"
       ]
     },
     "Microsoft.AspNetCore/2.2.0": {
@@ -3138,18 +3138,24 @@
         "microsoft.extensions.dependencyinjection.nuspec"
       ]
     },
-    "Microsoft.Extensions.DependencyInjection.Abstractions/3.1.9": {
-      "sha512": "8PkcaPwiTPOhqshoY4+rQUbz86X6YpLDLUqXOezh7L2A3pgpBmeBBByYIffofBlvQxDdQ0zB2DkWjbZWyCxRWg==",
+    "Microsoft.Extensions.DependencyInjection.Abstractions/5.0.0": {
+      "sha512": "ORj7Zh81gC69TyvmcUm9tSzytcy8AVousi+IVRAI8nLieQjOFryRusSFh7+aLk16FN9pQNqJAiMd7BTKINK0kA==",
       "type": "package",
-      "path": "microsoft.extensions.dependencyinjection.abstractions/3.1.9",
+      "path": "microsoft.extensions.dependencyinjection.abstractions/5.0.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net461/Microsoft.Extensions.DependencyInjection.Abstractions.dll",
+        "lib/net461/Microsoft.Extensions.DependencyInjection.Abstractions.xml",
         "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll",
         "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml",
-        "microsoft.extensions.dependencyinjection.abstractions.3.1.9.nupkg.sha512",
-        "microsoft.extensions.dependencyinjection.abstractions.nuspec"
+        "microsoft.extensions.dependencyinjection.abstractions.5.0.0.nupkg.sha512",
+        "microsoft.extensions.dependencyinjection.abstractions.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
       ]
     },
     "Microsoft.Extensions.FileProviders.Abstractions/2.2.0": {
@@ -3384,17 +3390,17 @@
         "version.txt"
       ]
     },
-    "Microsoft.NETCore.Targets/1.1.0": {
-      "sha512": "aOZA3BWfz9RXjpzt0sRJJMjAscAUm3Hoa4UWAfceV9UTYxgwZ1lZt5nO2myFf+/jetYQo4uTP7zS8sJY67BBxg==",
+    "Microsoft.NETCore.Targets/1.1.3": {
+      "sha512": "3Wrmi0kJDzClwAC+iBdUBpEKmEle8FQNsCs77fkiOIw/9oYA07bL1EZNX0kQ2OMN3xpwvl0vAtOCYY3ndDNlhQ==",
       "type": "package",
-      "path": "microsoft.netcore.targets/1.1.0",
+      "path": "microsoft.netcore.targets/1.1.3",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/netstandard1.0/_._",
-        "microsoft.netcore.targets.1.1.0.nupkg.sha512",
+        "microsoft.netcore.targets.1.1.3.nupkg.sha512",
         "microsoft.netcore.targets.nuspec",
         "runtime.json"
       ]
@@ -3658,10 +3664,10 @@
         "ref/xamarinwatchos10/_._"
       ]
     },
-    "MongoDB.Bson/2.11.2": {
-      "sha512": "7vJoaUKPPnW6Ej0r4UHV8DeYD0/SKk/73WlDfc5JMRJRjTj3jRUtGIXwpaFYq3wT8MRHmLwbM/KvkEAb7deHRw==",
+    "MongoDB.Bson/2.11.5": {
+      "sha512": "OWsEN7ktxFKcynAMdv08TE5wkL1kkyWJUv+zhO3H3HcK+S4AU52AnxoyVmVSdPk5OWYoTtzbeCOIdmZV2dk5zg==",
       "type": "package",
-      "path": "mongodb.bson/2.11.2",
+      "path": "mongodb.bson/2.11.5",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -3672,15 +3678,15 @@
         "lib/netstandard1.5/MongoDB.Bson.xml",
         "lib/netstandard2.0/MongoDB.Bson.dll",
         "lib/netstandard2.0/MongoDB.Bson.xml",
-        "mongodb.bson.2.11.2.nupkg.sha512",
+        "mongodb.bson.2.11.5.nupkg.sha512",
         "mongodb.bson.nuspec",
         "packageIcon.png"
       ]
     },
-    "MongoDB.Driver/2.11.2": {
-      "sha512": "4DT/VcE/6sw73tInWmQ1C92p1kHgKiuRx/DgYRtaUUILRaAdL8X1Gl3f8FXNMwH2rzH+KhOYCliYK7/+XWWZIw==",
+    "MongoDB.Driver/2.11.5": {
+      "sha512": "ejnn6BcFMTTLBAbahHklzxmhYTh6En33Gs4LIVu3NZ/VIr1F5AyjNfqLBtthTwNZkJbJWGVqk/NaUW3mjdAfgQ==",
       "type": "package",
-      "path": "mongodb.driver/2.11.2",
+      "path": "mongodb.driver/2.11.5",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -3691,15 +3697,15 @@
         "lib/netstandard1.5/MongoDB.Driver.xml",
         "lib/netstandard2.0/MongoDB.Driver.dll",
         "lib/netstandard2.0/MongoDB.Driver.xml",
-        "mongodb.driver.2.11.2.nupkg.sha512",
+        "mongodb.driver.2.11.5.nupkg.sha512",
         "mongodb.driver.nuspec",
         "packageIcon.png"
       ]
     },
-    "MongoDB.Driver.Core/2.11.2": {
-      "sha512": "e5/q9bqGEfGSsAq9Gn6+qWKEPs0s/U41tgfcWNtwAEpyg/btWO4RkeV0Jv8tG/KaXey1E151npmDPcwTrg7qjQ==",
+    "MongoDB.Driver.Core/2.11.5": {
+      "sha512": "s+ZVyIxV9aWQ+fdvQSYJJIemdOTG4B+cKLUftgCaKGNjQCt72yIt7HPYW/+SYP4Sj8hCva5nqztCFd4dKG95pg==",
       "type": "package",
-      "path": "mongodb.driver.core/2.11.2",
+      "path": "mongodb.driver.core/2.11.5",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -3724,7 +3730,7 @@
         "lib/netstandard1.5/MongoDB.Driver.Core.xml",
         "lib/netstandard2.0/MongoDB.Driver.Core.dll",
         "lib/netstandard2.0/MongoDB.Driver.Core.xml",
-        "mongodb.driver.core.2.11.2.nupkg.sha512",
+        "mongodb.driver.core.2.11.5.nupkg.sha512",
         "mongodb.driver.core.nuspec",
         "packageIcon.png",
         "runtimes/win/native/libzstd.dll",
@@ -6267,10 +6273,10 @@
         "system.resources.resourcemanager.nuspec"
       ]
     },
-    "System.Runtime/4.3.0": {
-      "sha512": "JufQi0vPQ0xGnAczR13AUFglDyVYt4Kqnz1AZaiKZ5+GICq0/1MH/mO/eAJHt/mHW1zjKBJd7kV26SrxddAhiw==",
+    "System.Runtime/4.3.1": {
+      "sha512": "abhfv1dTK6NXOmu4bgHIONxHyEqFjW8HwXPmpY9gmll+ix9UNo4XDcmzJn6oLooftxNssVHdJC1pGT9jkSynQg==",
       "type": "package",
-      "path": "system.runtime/4.3.0",
+      "path": "system.runtime/4.3.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -6355,7 +6361,7 @@
         "ref/xamarinmac20/_._",
         "ref/xamarintvos10/_._",
         "ref/xamarinwatchos10/_._",
-        "system.runtime.4.3.0.nupkg.sha512",
+        "system.runtime.4.3.1.nupkg.sha512",
         "system.runtime.nuspec"
       ]
     },
@@ -7679,19 +7685,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\micke\\.nuget\\packages\\": {}
+    "C:\\Users\\Pouki\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\micke\\Source\\Repos\\Tamagotchi_Game\\Microservices Demo\\AnimalAPITests\\AnimalAPITests.csproj",
+      "projectUniqueName": "C:\\Users\\Pouki\\Documents\\#Rep_C\\#Fontys_S3\\S3_Mickey_microservices\\AnimalAPITests\\AnimalAPITests.csproj",
       "projectName": "AnimalAPITests",
-      "projectPath": "C:\\Users\\micke\\Source\\Repos\\Tamagotchi_Game\\Microservices Demo\\AnimalAPITests\\AnimalAPITests.csproj",
-      "packagesPath": "C:\\Users\\micke\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\micke\\Source\\Repos\\Tamagotchi_Game\\Microservices Demo\\AnimalAPITests\\obj\\",
+      "projectPath": "C:\\Users\\Pouki\\Documents\\#Rep_C\\#Fontys_S3\\S3_Mickey_microservices\\AnimalAPITests\\AnimalAPITests.csproj",
+      "packagesPath": "C:\\Users\\Pouki\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Pouki\\Documents\\#Rep_C\\#Fontys_S3\\S3_Mickey_microservices\\AnimalAPITests\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\micke\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Pouki\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -7703,9 +7709,10 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\Users\\micke\\Source\\Repos\\Tamagotchi_Game\\Microservices Demo\\TamagotchiAnimalAPI\\TamagotchiAnimalAPI.csproj": {
-              "projectPath": "C:\\Users\\micke\\Source\\Repos\\Tamagotchi_Game\\Microservices Demo\\TamagotchiAnimalAPI\\TamagotchiAnimalAPI.csproj"
+            "C:\\Users\\Pouki\\Documents\\#Rep_C\\#Fontys_S3\\S3_Mickey_microservices\\TamagotchiAnimalAPI\\TamagotchiAnimalAPI.csproj": {
+              "projectPath": "C:\\Users\\Pouki\\Documents\\#Rep_C\\#Fontys_S3\\S3_Mickey_microservices\\TamagotchiAnimalAPI\\TamagotchiAnimalAPI.csproj"
             }
           }
         }
@@ -7718,6 +7725,7 @@
     },
     "frameworks": {
       "netcoreapp3.1": {
+        "targetAlias": "netcoreapp3.1",
         "dependencies": {
           "MSTest.TestAdapter": {
             "target": "Package",
@@ -7754,30 +7762,8 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "NU1701",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Package 'Apache.NMS 1.7.1' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETCoreApp,Version=v3.1'. This package may not be fully compatible with your project.",
-      "libraryId": "Apache.NMS",
-      "targetGraphs": [
-        ".NETCoreApp,Version=v3.1"
-      ]
-    },
-    {
-      "code": "NU1701",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Package 'Apache.NMS.ActiveMQ 1.7.2' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETCoreApp,Version=v3.1'. This package may not be fully compatible with your project.",
-      "libraryId": "Apache.NMS.ActiveMQ",
-      "targetGraphs": [
-        ".NETCoreApp,Version=v3.1"
-      ]
-    }
-  ]
+  }
 }

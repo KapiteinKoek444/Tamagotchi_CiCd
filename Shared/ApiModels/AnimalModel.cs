@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using System.Text;
 
 namespace Shared.Shared.ApiModels
 {
-	public class AnimalModel
+    [ExcludeFromCodeCoverage]
+    public class AnimalModel
 	{
         public Guid Id { get; set; }
         public Guid UserId { get; set; }
@@ -12,6 +14,9 @@ namespace Shared.Shared.ApiModels
         public float Food { get; set; }
         public float Energy { get; set; }
         public float Happiness { get; set; }
+        public float Experience { get; set; }
+        public int Level { get; set; }
         public int AnimalType { get; set; }
+        public bool IsDead { get; set; }
     }
 }

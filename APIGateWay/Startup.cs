@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
@@ -12,19 +13,25 @@ using Ocelot.Middleware;
 
 namespace APIGateWay
 {
+    [ExcludeFromCodeCoverage]
     public class Startup
     {
         // This method gets called by the runtime. Use this method to add services to the container.
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
+
+
+
             services.AddOcelot();
 
             services.AddCors(o => o.AddPolicy("MyPolicy", builder =>
             {
-                builder.AllowAnyOrigin()
+                builder.AllowCredentials()
                        .AllowAnyMethod()
+                       .WithOrigins()
                        .AllowAnyHeader();
+
             }));
         }
 
@@ -40,13 +47,15 @@ namespace APIGateWay
 
             app.UseCors("MyPolicy");
 
+
+            app.UseWebSockets();
+            app.UseOcelot().Wait();
+
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
             });
 
-            app.UseWebSockets();
-            app.UseOcelot().Wait();
         }
     }
 }
